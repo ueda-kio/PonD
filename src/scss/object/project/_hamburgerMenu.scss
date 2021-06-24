@@ -1,0 +1,25 @@
+@use "../../foundation/var";
+
+.p-hamburgerMenu {
+  position: fixed;
+  top: 12px;
+  right: 15px;
+  display: block;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @include var.mq('o-sp') {
+    display: none;
+  }
+
+  &__txt {
+    display: block;
+    margin-top: -3px;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

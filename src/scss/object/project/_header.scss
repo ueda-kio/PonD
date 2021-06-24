@@ -1,0 +1,209 @@
+@use "../../foundation/var";
+
+.p-header {
+  width: 100%;
+  height: 100vh;
+  background: url('#{var.$bgPath}hero@2x.jpg') no-repeat top center / cover;
+  color: #fff;
+
+  &__top {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 22px 15px;
+
+    @include var.mq('o-sp') {
+      padding: 31px 30px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  &__logo:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include var.mq('u-sp') {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-left: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    & > a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  &__link:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+      width: 100%;
+    transform: translate(-50%, -50%);
+
+    @include var.mq('u-sp') {
+      left: 0;
+      padding: 0 60px 0 40px;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__mainTitle {
+    font-size: 48px;
+
+    @include var.mq('u-sp') {
+      max-width: 374px;
+    }
+
+    @include var.mq('o-sp') {
+      padding: 0 80px;
+      font-size: 70px;
+      text-align: center;
+    }
+
+    & > strong {
+      font-weight: bold;
+    }
+  }
+
+  &__caption {
+    margin-top: 20px;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+
+    @include var.mq('o-sp') {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  & {
+    @media (max-width: 386px) {
+      &__title {
+        padding: 0 10.3vw;
+      }
+      &__mainTitle {
+        font-size: 12.4vw;
+      }
+    }
+  }
+
+  &__linkBtn {
+    margin-top: 50px;
+  }
+
+  &__linkBtn > .c-btn {
+
+    @include var.mq('u-sp') {
+      margin: 0;
+    }
+
+    & > a {
+      background-image: none;
+      border: solid 1px #fff;
+    }
+  }
+
+  &__scrollNav {
+    position: absolute;
+    bottom: 80px;
+    right: 12px;
+    font-size: 12px;
+    letter-spacing: .1rem;
+    transform: translateY(-100%) rotate(90deg);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 110%;
+      width: 70px;
+      height: 1px;
+      background-color: #fff;
+      transform: translateY(-50%);
+      animation: extendBorder 1.5s cubic-bezier(1, 0, 0, 1) 0s infinite backwards;
+    }
+
+    @include var.mq('o-sp') {
+      bottom: 100px;
+
+      &::after {
+        width: 90px;
+      }
+    }
+  }
+}
+
+@keyframes extendBorder {
+  0% {
+    transform-origin: left;
+    transform: translateY(-50%) scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: translateY(-50%) scaleX(1);
+  }
+  51% {
+    transform-origin: right;
+    transform: translateY(-50%) scaleX(1);
+  }
+  100% {
+    transform-origin: right;
+    transform: translateY(-50%) scaleX(0);
+  }
+}
