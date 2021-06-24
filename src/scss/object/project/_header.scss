@@ -106,6 +106,7 @@
 
   &__mainTitle {
     font-size: 48px;
+    line-height: 1.4;
 
     @include var.mq('u-sp') {
       max-width: 374px;
