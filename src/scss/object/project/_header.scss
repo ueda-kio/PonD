@@ -124,7 +124,6 @@
 
   &__caption {
     margin-top: 20px;
-    letter-spacing: .1rem;
     white-space: nowrap;
 
     @include var.mq('o-sp') {
@@ -165,7 +164,6 @@
     bottom: 80px;
     right: 12px;
     font-size: 12px;
-    letter-spacing: .1rem;
     transform: translateY(-100%) rotate(90deg);
 
     &::after {
