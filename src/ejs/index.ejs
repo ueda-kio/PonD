@@ -5,187 +5,148 @@
 
 <% include ./template/_head %>
 <!-- .l-header -->
-<% include ./template/_header %>
-<header class="p-header">
-  <div class="p-header__top">
-    <div class="p-header__logo">
-      <a href="/">PON DESIGN</a>
-    </div>
-    <nav>
-      <ul class="p-header__nav">
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>NEWS</a></li>
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>SERVICE</a></li>
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>WORKS</a></li>
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>COMPANY</a></li>
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>RECRUIT</a></li>
-        <li class="p-header__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>CONTACT</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="p-header__title">
-    <h1 class="p-header__mainTitle">
-      <strong>WEB</strong>
-      <strong>DESIGN</strong>
-      <strong>SPECIALIST</strong>
-    </h1>
-    <p class="p-header__caption">お客様の夢を叶える<wbr>Webサイトを制作</p>
-    <div class="p-header__linkBtn">
-      <div class="c-btn">
-        <a href="/contact">
-          <span class="c-btn__txt">CONTACT</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="p-header__scrollNav">
-    <span>SCROLL</span>
-  </div>
-</header>
-<button class="p-hamburgerMenu js-menuTrigger" tabindex="0">
-  <div class="c-hamburgerMenu">
-    <span class="c-hamburgerMenu__text">ユーザーメニュー</span>
-  </div>
-  <span class="p-hamburgerMenu__txt">MENU</span>
-</button>
+<% include ./template/_header_home %>
 <!-- .l-main -->
-<main class="p-home">
-  <section class="p-home__news">
-    <h2 class="c-sectionTitle">
-      <strong class="c-sectionTitle__main">NEWS</strong>
-      <span class="c-sectionTitle__caption">お知らせ</span>
-    </h2>
-    <ul class="p-home__newsList">
-      <% arrayNews.forEach(el => { %>
-        <li>
-          <a href="" class="p-home__newsLink">
-            <p class="p-home__newsData">
-              <time datetime="<%= el.dateTime %>"><%= el.date %></time>
-              <span class="p-home__newsType"><%= el.type %></span>
-            </p>
-            <p class="p-home__newsTitle"><%= el.title %></p>
-          </a>
-        </li>
-      <% }) %>
-    </ul>
-  </section>
-  <section class="p-home__service">
-    <h2 class="c-sectionTitle">
-      <strong class="c-sectionTitle__main">SERVICE</strong>
-      <span class="c-sectionTitle__caption">事業内容</span>
-    </h2>
-    <ul class="p-home__serviceList">
-      <li>
-        <div>
-          <img src="<%= path %>jessy-smith-zFOm6KzA-7g-unsplash@2x-min.jpg" alt="">
-        </div>
-        <h3 class="p-home__serviceTitle">Webサイト制作</h3>
-        <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
-      </li>
-      <li>
-        <div>
-          <img src="<%= path %>luke-chesser-JKUTrJ4vK00-unsplash (1)@2x-min.jpg" alt="">
-        </div>
-        <h3 class="p-home__serviceTitle">Webサイト制作</h3>
-        <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
-      </li>
-      <li>
-        <div>
-          <img src="<%= path %>pexels-cottonbro-3585088@2x-min.jpg" alt="">
-        </div>
-        <h3 class="p-home__serviceTitle">Webサイト制作</h3>
-        <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
-      </li>
-    </ul>
-    <div class="c-btn">
-      <a href="/contact">
-        <span class="c-btn__txt">MORE</span>
-      </a>
-    </div>
-  </section>
-  <section class="p-home__works">
-    <div class="p-home__worksHero swiper-container">
-      <ul class="p-home__worksList swiper-wrapper">
-        <li class="p-home__worksPhoto swiper-slide">
-          <img src="<%= path %>smoothiesta@2x-min.jpg" alt="">
-        </li>
-        <!-- <li class="p-home__worksPhoto swiper-slide">
-          <img src="<%= path %>web-conference01-min.jpeg" alt="">
-        </li>
-        <li class="p-home__worksPhoto swiper-slide">
-          <img src="<%= path %>lamina01-min.jpeg" alt="">
-        </li> -->
+<main>
+  <div class="p-home">
+    <section class="p-home__news">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">NEWS</strong>
+        <span class="c-sectionTitle__caption">お知らせ</span>
+      </h2>
+      <ul class="p-home__newsList">
+        <% arrayNews.forEach(el => { %>
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="<%= el.dateTime %>"><%= el.date %></time>
+                <span class="p-home__newsType"><%= el.type %></span>
+              </p>
+              <p class="p-home__newsTitle"><%= el.title %></p>
+            </a>
+          </li>
+        <% }) %>
       </ul>
-    </div>
-    <div class="p-home__worksTextArea">
+    </section>
+    <section class="p-home__service">
       <h2 class="c-sectionTitle">
         <strong class="c-sectionTitle__main">SERVICE</strong>
         <span class="c-sectionTitle__caption">事業内容</span>
       </h2>
+      <ul class="p-home__serviceList">
+        <li>
+          <div>
+            <img src="<%= path %>jessy-smith-zFOm6KzA-7g-unsplash@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+        <li>
+          <div>
+            <img src="<%= path %>luke-chesser-JKUTrJ4vK00-unsplash (1)@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+        <li>
+          <div>
+            <img src="<%= path %>pexels-cottonbro-3585088@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+      </ul>
+      <div class="c-btn">
+        <a href="/contact">
+          <span class="c-btn__txt">MORE</span>
+        </a>
+      </div>
+    </section>
+    <section class="p-home__works">
+      <div class="p-home__worksHero swiper-container">
+        <ul class="p-home__worksList swiper-wrapper">
+          <li class="p-home__worksPhoto swiper-slide">
+            <img src="<%= path %>smoothiesta@2x-min.jpg" alt="">
+          </li>
+          <!-- <li class="p-home__worksPhoto swiper-slide">
+            <img src="<%= path %>web-conference01-min.jpeg" alt="">
+          </li>
+          <li class="p-home__worksPhoto swiper-slide">
+            <img src="<%= path %>lamina01-min.jpeg" alt="">
+          </li> -->
+        </ul>
+      </div>
+      <div class="p-home__worksTextArea">
+        <h2 class="c-sectionTitle">
+          <strong class="c-sectionTitle__main">SERVICE</strong>
+          <span class="c-sectionTitle__caption">事業内容</span>
+        </h2>
+        <p>
+          様々なジャンルのWebサイト制作が可能です。<br>
+          ご購入やお申込み数の増加などを実現します！
+        </p>
+        <div class="c-btn">
+          <a href="/contact">
+            <span class="c-btn__txt">MORE</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="p-home__company">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">COMPANY</strong>
+        <span class="c-sectionTitle__caption">私たちについて</span>
+      </h2>
+      <p class="p-home__companyTitle">
+        サイトのゴール =<wbr>
+        夢を叶えること
+      </p>
       <p>
-        様々なジャンルのWebサイト制作が可能です。<br>
-        ご購入やお申込み数の増加などを実現します！
+        お客様の夢を叶えること。<br>
+        それがWebサイトのゴールであり、<br class="u-sp-only">私たちが目指すことです。<br>
+        だからこそちゃんと成果を出すサイトを<br class="u-sp-only">全力でお作りします。<br>
+        お客様の笑顔を見たい。<br>
+        夢を実現する手助けをさせてください。
       </p>
       <div class="c-btn">
         <a href="/contact">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
-    </div>
-  </section>
-  <section class="p-home__company">
-    <h2 class="c-sectionTitle">
-      <strong class="c-sectionTitle__main">COMPANY</strong>
-      <span class="c-sectionTitle__caption">私たちについて</span>
-    </h2>
-    <p class="p-home__companyTitle">
-      サイトのゴール =<wbr>
-      夢を叶えること
-    </p>
-    <p>
-      お客様の夢を叶えること。<br>
-      それがWebサイトのゴールであり、<br class="u-sp-only">私たちが目指すことです。<br>
-      だからこそちゃんと成果を出すサイトを<br class="u-sp-only">全力でお作りします。<br>
-      お客様の笑顔を見たい。<br>
-      夢を実現する手助けをさせてください。
-    </p>
-    <div class="c-btn">
-      <a href="/contact">
-        <span class="c-btn__txt">MORE</span>
-      </a>
-    </div>
-  </section>
-  <section class="p-home__recruit">
-    <div class="p-home__recruitHero">
-      <picture>
-      <source media="(max-width: 850px)" srcset="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash-sp@2x-min.jpg">
-      <img src="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash@2x-min.jpg" alt="">
-    </picture>
-    </div>
-    <div class="p-home__recruitTextArea">
+    </section>
+    <section class="p-home__recruit">
+      <div class="p-home__recruitHero">
+        <picture>
+        <source media="(max-width: 850px)" srcset="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash-sp@2x-min.jpg">
+        <img src="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash@2x-min.jpg" alt="">
+      </picture>
+      </div>
+      <div class="p-home__recruitTextArea">
+        <h2 class="c-sectionTitle">
+          <strong class="c-sectionTitle__main">RECRUIT</strong>
+          <span class="c-sectionTitle__caption">採用情報</span>
+        </h2>
+        <p>私たちと一緒に働きませんか？</p>
+        <div class="c-btn">
+          <a href="/contact">
+            <span class="c-btn__txt">MORE</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="p-home__contact">
       <h2 class="c-sectionTitle">
-        <strong class="c-sectionTitle__main">RECRUIT</strong>
-        <span class="c-sectionTitle__caption">採用情報</span>
+        <strong class="c-sectionTitle__main">CONTACT</strong>
+        <span class="c-sectionTitle__caption">お問合せ</span>
       </h2>
-      <p>私たちと一緒に働きませんか？</p>
+      <p>Webサイトの制作のご依頼やお見積りなど、<br class="u-sp-only">お気軽にご相談ください。</p>
       <div class="c-btn">
         <a href="/contact">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
-    </div>
-  </section>
-  <section class="p-home__contact">
-    <h2 class="c-sectionTitle">
-      <strong class="c-sectionTitle__main">CONTACT</strong>
-      <span class="c-sectionTitle__caption">お問合せ</span>
-    </h2>
-    <p>Webサイトの制作のご依頼やお見積りなど、<br class="u-sp-only">お気軽にご相談ください。</p>
-    <div class="c-btn">
-      <a href="/contact">
-        <span class="c-btn__txt">MORE</span>
-      </a>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 <!-- l-footer -->
 <% include ./template/_footer %>

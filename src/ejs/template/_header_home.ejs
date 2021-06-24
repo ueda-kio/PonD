@@ -1,4 +1,4 @@
-<header class="p-header">
+<header class="p-header--home">
   <div class="p-header__top">
     <div class="p-header__logo">
       <a href="/">PON DESIGN</a>
@@ -14,11 +14,23 @@
       </ul>
     </nav>
   </div>
-  <div class="p-header__title">
-    <h1 class="p-header__mainTitle">
-      <strong><%= header.title %></strong>
+  <div class="p-header__title<%= page === 'home' ? '--home' : '' %>">
+    <h1 class="p-header__mainTitle<%= page === 'home' ? '--home' : '' %>">
+      <strong>WEB</strong>
+      <strong>DESIGN</strong>
+      <strong>SPECIALIST</strong>
     </h1>
-    <p class="p-header__caption"><%= header.caption %></p>
+    <p class="p-header__caption<%= page === 'home' ? '--home' : '' %>">お客様の夢を叶える<wbr>Webサイトを制作</p>
+    <div class="p-header__linkBtn">
+      <div class="c-btn">
+        <a href="/contact">
+          <span class="c-btn__txt">CONTACT</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="p-header__scrollNav">
+    <span>SCROLL</span>
   </div>
 </header>
 <button class="p-hamburgerMenu js-menuTrigger" tabindex="0">

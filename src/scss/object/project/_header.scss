@@ -1,10 +1,21 @@
 @use "../../foundation/var";
 
 .p-header {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  background: url('#{var.$bgPath}hero@2x.jpg') no-repeat top center / cover;
+  height: 200px;
+  background: url('#{var.$bgPath}hero_page@2x-min.jpg') no-repeat top center / cover;
   color: #fff;
+
+  @include var.mq('o-sp') {
+    height: 300px;
+  }
+
+  &--home {
+    @extend .p-header;
+    height: 100vh;
+    background: url('#{var.$bgPath}hero@2x.jpg') no-repeat top center / cover;
+  }
 
   &__top {
     position: fixed;
@@ -92,8 +103,18 @@
 
   &__title {
     position: absolute;
-    top: 50%;
+    bottom: 41px;
     left: 50%;
+    transform: translateX(-50%);
+
+    @include var.mq('o-sp') {
+      bottom: 71px;
+    }
+  }
+
+  &__title--home {
+    @extend .p-header__title;
+    top: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
 
@@ -105,6 +126,19 @@
   }
 
   &__mainTitle {
+    font-size: 30px;
+
+    @include var.mq('o-sp') {
+      font-size: 36px;
+    }
+
+    & > strong {
+      font-weight: bold;
+    }
+  }
+
+  &__mainTitle--home {
+    @extend .p-header__mainTitle;
     font-size: 48px;
     line-height: 1.4;
 
@@ -117,14 +151,21 @@
       font-size: 70px;
       text-align: center;
     }
-
-    & > strong {
-      font-weight: bold;
-    }
   }
 
   &__caption {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+
+    @include var.mq('o-sp') {
+      font-size: 14px;
+    }
+  }
+
+  &__caption--home {
     margin-top: 20px;
+    font-weight: bold;
     white-space: nowrap;
 
     @include var.mq('o-sp') {
@@ -135,10 +176,10 @@
 
   & {
     @media (max-width: 386px) {
-      &__title {
+      &__title--home {
         padding: 0 10.3vw;
       }
-      &__mainTitle {
+      &__mainTitle--home {
         font-size: 12.4vw;
       }
     }
