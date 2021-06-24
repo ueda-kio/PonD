@@ -1,0 +1,88 @@
+@use "../../foundation/var";
+
+.p-footer {
+  padding: 60px 30px 20px;
+  background-color: #000;
+  color: #fff;
+
+  &__logo {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: solid 1px #fff;
+
+    @include var.mq('o-sp') {
+      display: none;
+    }
+  }
+
+  &__list {
+    text-align: center;
+
+    @include var.mq('u-sp') {
+      max-width: 200px;
+      margin: 30px auto 0;
+    }
+
+    @include var.mq('o-sp') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+
+    &:nth-of-type(n + 2) {
+      margin: 20px 0 0;
+
+      @include var.mq('o-sp') {
+        margin: 0 0 0 30px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      visibility: hidden;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+
+    & > a {
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    & > a[aria-current=page] {
+      color: var.$colorPurPle;
+    }
+  }
+
+  &__link:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+
+  &__copylight {
+    text-align: center;
+    margin-top: 40px;
+
+    @include var.mq('o-sp') {
+      margin-top: 22px;
+    }
+
+    & > small {
+      font-size: 10px;
+      color: var.$colorPurPle;
+    }
+  }
+}

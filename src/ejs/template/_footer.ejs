@@ -1,10 +1,20 @@
-      <footer class="l-footer">
-        <div class="p-footerLogo">
-          <p class="p-footerLogo__text">
-            By <a href="#">Mana</a><br>© 2012 <a href="#">Web Creator Box</a>
-          </p>
-        </div>
-      </footer>
-    </div>
-  </body>
+<footer class="p-footer">
+  <div class="p-footer__logo">PON DESIGN</div>
+  <nav>
+    <ul class="p-footer__list">
+      <li class="p-footer__link"><a href="/" <%= page === 'home' ? 'aria-current=page' : '' %>>HOME</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a></li>
+    </ul>
+  </nav>
+  <p class="p-footer__copylight">
+    <small>© PON DESIGN</small>
+  </p>
+</footer>
+</div>
+</body>
 </html>
