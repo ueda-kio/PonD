@@ -1,0 +1,7 @@
+@use "../../foundation/var";
+
+.u-sp-only {
+  @include var.mq('o-sp') {
+    display: none;
+  }
+}

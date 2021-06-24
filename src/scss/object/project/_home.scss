@@ -1,0 +1,154 @@
+@use "../../foundation/var";
+
+.p-home {
+  padding-top: 40px;
+
+  @include var.mq('o-sp') {
+    padding-top: 70px;
+  }
+
+  &__news {
+    max-width: 917px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__newsList {
+    max-height: 380px;
+    overflow-y: scroll;
+
+    & > li + li {
+      border-top: solid 1px #ddd;
+    }
+  }
+
+  &__newsLink {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+
+    &:hover .p-home__newsTitle {
+      text-decoration: underline;
+      text-decoration-color: #999;
+    }
+  }
+
+  &__newsType {
+    display: inline-block;
+    min-width: 82px;
+    max-height: 19px;
+    margin-left: 15px;
+    border-radius: 50px;
+    background-color: #e8e8e8;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 19px;
+
+    @include var.mq('o-sp') {
+      margin-left: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__newsTitle {
+    @include var.mq('u-sp') {
+      margin-top: 5px;
+    }
+  }
+
+  &__service {
+    max-width: 1150px;
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+
+  &__serviceList {
+    margin: 0 auto;
+
+    @include var.mq('u-sp') {
+      max-width: 500px;
+
+      & > li + li {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__serviceTitle {
+    margin: 15px 0 10px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: bold;
+  }
+
+  &__works {
+    max-width: 1261px;
+    margin-top: 80px;
+  }
+
+  &__worksHero {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include var.mq('o-sp') {
+      max-width: 750px;
+      padding: 0;
+    }
+  }
+
+  &__worksTextArea {
+    margin-top: -116px;
+    padding: 156px 20px 60px;
+    background-color: var.$colorGray;
+    text-align: center;
+  }
+
+  &__company {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background: url('#{var.$bgPath}cirlcles-sp@2x-min.jpg') no-repeat center center / contain;
+    text-align: center;
+  }
+
+  &__companyTitle {
+    margin-bottom: 40px;
+    font-size: 32px;
+    text-decoration: solid underline 8px #f5f534;
+    white-space: nowrap;
+  }
+
+  &__recruit {
+    max-width: 1110px;
+    margin: 40px auto 0;
+
+    @include var.mq('o-sp') {
+      display: flex;
+      flex-direction: row-reverse;
+      margin: 65px auto 0;
+    }
+  }
+
+  &__recruitHero {
+    max-height: 37.33vw;
+    overflow: hidden;
+  }
+
+  &__recruitTextArea {
+    padding: 60px 0 50px;
+    background-color: var.$colorGray;
+    text-align: center;
+  }
+
+  &__contact {
+    margin-top: 80px;
+    padding: 60px 0;
+    background-color: var.$colorGray;
+    text-align: center;
+
+    @include var.mq('o-sp') {
+      margin-top: 100px;
+    }
+  }
+}
