@@ -1,4 +1,5 @@
-<% var title = "TOP"; var description = "トップのdescription"; const page = 'home' %>
+<% var title = "TOP"; var description = "トップのdescription"; %>
+<% const page = 'home' %>
 <% var path = '/assets/images/'; %>
 <% include ./template/_arrayNews %>
 
@@ -23,11 +24,6 @@
   </div>
   <div class="p-header__title">
     <h1 class="p-header__mainTitle">
-      <!-- <strong>
-        WEB&nbsp;
-        DESIGN&nbsp;
-        SPECIALIST
-      </strong> -->
       <strong>WEB</strong>
       <strong>DESIGN</strong>
       <strong>SPECIALIST</strong>
@@ -62,7 +58,7 @@
       <% arrayNews.forEach(el => { %>
         <li>
           <a href="" class="p-home__newsLink">
-            <p>
+            <p class="p-home__newsData">
               <time datetime="<%= el.dateTime %>"><%= el.date %></time>
               <span class="p-home__newsType"><%= el.type %></span>
             </p>
@@ -152,13 +148,17 @@
       お客様の笑顔を見たい。<br>
       夢を実現する手助けをさせてください。
     </p>
+    <div class="c-btn">
+      <a href="/contact">
+        <span class="c-btn__txt">MORE</span>
+      </a>
+    </div>
   </section>
   <section class="p-home__recruit">
     <div class="p-home__recruitHero">
       <picture>
       <source media="(max-width: 850px)" srcset="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash-sp@2x-min.jpg">
-      <source media="(max-width: 950px)" srcset="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash@2x-min.jpg">
-      <img src="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash-sp@2x-min.jpg" alt="">
+      <img src="<%= path %>you-x-ventures-X8H8vPcelPk-unsplash@2x-min.jpg" alt="">
     </picture>
     </div>
     <div class="p-home__recruitTextArea">

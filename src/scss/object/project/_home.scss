@@ -11,6 +11,10 @@
     max-width: 917px;
     margin: 0 auto;
     padding: 0 20px;
+
+    @include var.mq('o-sp') {
+      display: flex;
+    }
   }
 
   &__newsList {
@@ -20,6 +24,11 @@
     & > li + li {
       border-top: solid 1px #ddd;
     }
+
+    @include var.mq('o-sp') {
+      max-height: 220px;
+      margin-left: 50px;
+    }
   }
 
   &__newsLink {
@@ -27,10 +36,18 @@
     padding: 10px 0;
     text-decoration: none;
 
+    @include var.mq('o-sp') {
+      display: flex;
+    }
+
     &:hover .p-home__newsTitle {
       text-decoration: underline;
       text-decoration-color: #999;
     }
+  }
+
+  &__newsData {
+    white-space: nowrap;
   }
 
   &__newsType {
@@ -46,21 +63,27 @@
     line-height: 19px;
 
     @include var.mq('o-sp') {
-      margin-left: 20px;
+      margin-left: 17px;
       font-size: 12px;
     }
   }
 
   &__newsTitle {
-    @include var.mq('u-sp') {
-      margin-top: 5px;
+    margin: 5px 0 0;
+
+    @include var.mq('o-sp') {
+      margin: 0 0 0 20px;
     }
   }
 
   &__service {
     max-width: 1150px;
-    margin-top: 80px;
+    margin: 80px 0 0;
     padding: 0 20px;
+
+    @include var.mq('o-sp') {
+      margin: 140px auto 0;
+    }
   }
 
   &__serviceList {
@@ -73,6 +96,12 @@
         margin-top: 40px;
       }
     }
+
+    @include var.mq('o-sp') {
+      display: grid;
+      grid-template-columns: repeat(3, calc(33.33% - 20px));
+      column-gap: 30px;
+    }
   }
 
   &__serviceTitle {
@@ -80,41 +109,84 @@
     text-align: center;
     font-family: "Montserrat";
     font-weight: bold;
+
+    @include var.mq('o-sp') {
+      margin: 24px 0 17px;
+    }
   }
 
   &__works {
+    position: relative;
     max-width: 1261px;
     margin-top: 80px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 80%;
+      background-color: var.$colorGray;
+      z-index: -10;
+    }
+
+    @include var.mq('o-sp') {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin: 140px auto 0;
+
+      &::before {
+        width: 80%;
+        height: 100%;
+      }
+    }
   }
 
   &__worksHero {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 20px;
+    z-index: 10;
 
     @include var.mq('o-sp') {
+      width: 60%;
       max-width: 750px;
+      margin: 0;
       padding: 0;
     }
   }
 
   &__worksTextArea {
-    margin-top: -116px;
-    padding: 156px 20px 60px;
-    background-color: var.$colorGray;
+    padding: 40px 20px 60px;
     text-align: center;
+
+    @include var.mq('o-sp') {
+      width: 40%;
+      padding: 13% 50px 13% 20px;
+    }
   }
 
   &__company {
-    margin-top: 40px;
+    max-width: 1340px;
+    margin: 40px auto 0;
     padding: 40px 20px;
     background: url('#{var.$bgPath}cirlcles-sp@2x-min.jpg') no-repeat center center / contain;
     text-align: center;
+
+    @include var.mq('o-sp') {
+      margin: 60px auto 0;
+      padding: 120px 20px 80px;
+      background: url('#{var.$bgPath}bg-face@2x-min.png') no-repeat center center / contain,
+                  url('#{var.$bgPath}bg-circle@2x-min.png') no-repeat center center /contain;
+    }
   }
 
   &__companyTitle {
     margin-bottom: 40px;
     font-size: 32px;
+    font-weight: bold;
     text-decoration: solid underline 8px #f5f534;
     white-space: nowrap;
   }
@@ -131,14 +203,31 @@
   }
 
   &__recruitHero {
-    max-height: 37.33vw;
     overflow: hidden;
+
+    @include var.mq('u-sp') {
+      max-height: 37.33vw;
+    }
+
+    @include var.mq('o-sp') {
+      width: 60%;
+
+      & img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   &__recruitTextArea {
     padding: 60px 0 50px;
     background-color: var.$colorGray;
     text-align: center;
+
+    @include var.mq('o-sp') {
+      width: 40%;
+      padding: 70px 0;
+    }
   }
 
   &__contact {
@@ -149,6 +238,7 @@
 
     @include var.mq('o-sp') {
       margin-top: 100px;
+      padding: 80px 0;
     }
   }
 }

@@ -5,6 +5,10 @@
   background-color: #000;
   color: #fff;
 
+  @include var.mq('o-sp') {
+    padding-bottom: 60px;
+  }
+
   &__logo {
     font-size: 18px;
     font-weight: bold;
