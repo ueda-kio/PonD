@@ -1,0 +1,65 @@
+<% var title = "WORKS"; var description = "worksページのdescription"; %>
+<% const page = 'works' %>
+<%
+  const header = {
+    title: 'WORKS',
+    caption: '制作実績'
+  }
+%>
+<% var path = '/assets/images/'; %>
+
+<% include ../template/_head %>
+<!-- .l-header -->
+<% include ../template/_header %>
+<main class="l-main">
+  <div class="l-main__heading">
+    <ol class="l-main__breadcrumb">
+      <li><a href="/">HOME</a></li>
+      <li><%= title %></li>
+    </ol>
+  </div>
+  <section class="p-works">
+    <ul class="p-works__list">
+      <li>
+        <a href="" target="_blank" class="p-works__link">
+          <div class="p-works__img">
+            <img src="<%= path %>smoothiesta@2x-min.jpg" alt="">
+          </div>
+          <span class="p-works__site">Smoothiesta 様</span>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank" class="p-works__link">
+          <div class="p-works__img">
+            <img src="<%= path %>web-conference01-min.jpeg" alt="">
+          </div>
+          <span class="p-works__site">Web Conference 様</span>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank" class="p-works__link">
+          <div class="p-works__img">
+            <img src="<%= path %>lamina01-min.jpeg" alt="">
+          </div>
+          <span class="p-works__site">LAMINA 様</span>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank" class="p-works__link">
+          <div class="p-works__img">
+            <img src="<%= path %>citylab-min.jpeg" alt="">
+          </div>
+          <span class="p-works__site">CITYLab 様</span>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank" class="p-works__link">
+          <div class="p-works__img">
+            <img src="<%= path %>tabilog-min.jpeg" alt="">
+          </div>
+          <span class="p-works__site">TABILOG 様</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+<% include ../template/_footer %>
