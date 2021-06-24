@@ -1,0 +1,43 @@
+<% var title = "NEWS"; var description = "newsページのdescription"; %>
+<% const page = 'news' %>
+<%
+  const header = {
+    title: 'NEWS',
+    caption: 'お知らせ'
+  }
+%>
+<% include ../template/_arrayNews %>
+<% var path = '/assets/images/'; %>
+
+<% include ../template/_head %>
+<!-- .l-header -->
+<% include ../template/_header %>
+<main class="l-main">
+  <div class="l-main__heading">
+    <ol class="l-main__breadcrumb">
+      <li><a href="/">HOME</a></li>
+      <li><%= title %></li>
+    </ol>
+  </div>
+  <section class="p-news">
+    <ul class="p-news__list">
+      <% arrayNews.forEach(el => { %>
+        <li>
+          <a href="" class="p-news__link">
+            <p class="p-news__data">
+              <time datetime="<%= el.dateTime %>"><%= el.date %></time>
+              <span class="p-news__type"><%= el.type %></span>
+            </p>
+            <p class="p-news__title"><%= el.title %></p>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+    <ol class="p-news__nav">
+      <li class="p-news__pagenation--current"><a><b>1</b></a></li>
+      <li class="p-news__pagenation"><a href="/news/page02.html">2</a></li>
+      <li class="p-news__pagenation"><a href="/news/page03.html">3</a></li>
+    </ol>
+  </section>
+//TODO page分け
+<% include ../template/_footer %>

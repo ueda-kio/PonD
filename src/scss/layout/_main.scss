@@ -2,6 +2,44 @@
 
 .l-main {
 
+  &__heading {
+    padding: 5px 20px;
+    background-color: var.$colorGray;
+  }
+
+  &__breadcrumb {
+    display: flex;
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+
+    & > li + li {
+      position: relative;
+      padding-left: 30px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0.7em;
+        left: 11px;
+        display: block;
+        width: 7px;
+        height: 1px;
+        border-radius: 5px;
+        background-color: #333;
+      }
+
+      &::before {
+        transform: rotate(30deg) translateY(-2px);
+      }
+
+      &::after {
+        transform: rotate(-30deg) translateY(2px);
+      }
+    }
+  }
+
   &__contact {
     margin-top: 80px;
     padding: 60px 0;
