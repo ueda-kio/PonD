@@ -1,7 +1,7 @@
 .c-btn {
   width: 220px;
   height: 60px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   text-align: center;
 
   & > a {
@@ -21,7 +21,7 @@
 
   &__txt {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 60px;
   }

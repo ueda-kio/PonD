@@ -148,7 +148,7 @@
     margin-top: 50px;
   }
 
-  &__linkBtn > .c-btn {
+  &__linkBtn .c-btn {
 
     @include var.mq('u-sp') {
       margin: 0;
@@ -157,6 +157,10 @@
     & > a {
       background-image: none;
       border: solid 1px #fff;
+    }
+
+    &__txt {
+      font-size: 15px;
     }
   }
 
