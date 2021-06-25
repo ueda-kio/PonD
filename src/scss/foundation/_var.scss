@@ -67,3 +67,42 @@ $narrowLineHeight: 1.2;
     }
   }
 }
+
+@mixin hoverBtn {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform .5s;
+  }
+
+  &::before {
+    right: -50px;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid #e3d9f3;
+    transform: translateX(-100%);
+  }
+  &::after {
+    left: -50px;
+    border-left: 50px solid transparent;
+    border-top: 60px solid #e3d9f3;
+    transform: translateX(100%);
+  }
+
+  &:hover {
+    &::before {
+      transform: translateX(-49%);
+    }
+
+    &::after {
+      transform: translateX(49%);
+    }
+  }
+}
