@@ -2,14 +2,15 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-scroll-disabled="false">
 <head>
 <meta charset="UTF-8" />
 <meta name="description" content="トップのdescription" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="./assets/images/fav.png" />
+<link rel="icon" href="/assets/images/favicon.ico" />
 <!--facebook用-->
 <meta property="og:title" content="TOP" />
 <meta property="og:description" content="トップのdescription" />
@@ -26,111 +27,277 @@
 <meta name="twitter:description" content="トップのdescription" />
 <meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
 <title>TOP</title>
 <link href="assets/stylesheet/bundle.css" rel="stylesheet"></head>
 <body>
-  <div class="c-topDecoration"></div>
-  <div class="l-wrapper">
-
-
+<div class="l-wrapper">
 <!-- .l-header -->
-<header class="l-header">
-  <div class="p-header">
+<header class="p-header--home">
+  <div class="p-header__top">
     <div class="p-header__logo">
-      <img src="" alt="">
+      <a href="/" tabindex="1">PON DESIGN</a>
     </div>
     <nav>
-      <ul class="p-headerNav">
-        <li class="p-headerNav__list"><a class="c-link" href="">ホーム</a></li>
-        <li class="p-headerNav__list"><a class="c-link" href="">自己紹介</a></li>
-        <li class="p-headerNav__list"><a class="c-link" href="">作品</a></li>
-        <li class="p-headerNav__list"><a class="c-link" href="">お問い合わせ</a></li>
+      <ul class="p-header__nav">
+        <li class="p-header__link"><a href="/news" >NEWS</a></li>
+        <li class="p-header__link"><a href="/service" >SERVICE</a></li>
+        <li class="p-header__link"><a href="/works" >WORKS</a></li>
+        <li class="p-header__link"><a href="/company" >COMPANY</a></li>
+        <li class="p-header__link"><a href="/recruit" >RECRUIT</a></li>
+        <li class="p-header__link"><a href="/contact" >CONTACT</a></li>
       </ul>
     </nav>
   </div>
-</header>
-<!-- .l-main -->
-<main  class="l-main">
-  <!-- .l-hero -->
-  <div class="l-hero">
-    <img class="c-mainImg" src="/assets/images/hero.jpg" alt="タイトル画像" >
-    <img src="/assets/images/shadow.jpg" alt="タイトル画像の影" >
+  <div class="p-header__title--home">
+    <h1 class="p-header__mainTitle--home">
+      <strong>WEB</strong>
+      <strong>DESIGN</strong>
+      <strong>SPECIALIST</strong>
+    </h1>
+    <p class="p-header__caption--home">お客様の夢を叶える<wbr>Webサイトを制作</p>
+    <div class="p-header__linkBtn">
+      <div class="c-btn">
+        <a href="/contact">
+          <span class="c-btn__txt">CONTACT</span>
+        </a>
+      </div>
+    </div>
   </div>
-  <!-- .l-section -->
-  <section class="l-section">
-    <h1 class="l-section__title">世界を旅するフォトグラファーです</h1>
-    <div class="p-workSection">
-      <h2 class="p-workSection__title">最近の作品</h2>
-      <ul class="p-photoList">
+  <div class="p-header__scrollNav">
+    <span>SCROLL</span>
+  </div>
+</header>
+<button class="p-hamburgerMenu js-menuTrigger" tabindex="2">
+  <div class="c-hamburgerMenu">
+    <span class="c-hamburgerMenu__text">メニュー</span>
+  </div>
+  <span class="p-hamburgerMenu__txt">MENU</span>
+  <span class="p-hamburgerMenu__txt--open">OPEN</span>
+  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
+</button>
+<nav class="p-globalMenu">
+  <ul class="p-globalMenu__list">
+    <li class="p-globalMenu__link"><a href="/news" >NEWS</a></li>
+    <li class="p-globalMenu__link"><a href="/service" >SERVICE</a></li>
+    <li class="p-globalMenu__link"><a href="/works" >WORKS</a></li>
+    <li class="p-globalMenu__link"><a href="/company" >COMPANY</a></li>
+    <li class="p-globalMenu__link"><a href="/recruit" >RECRUIT</a></li>
+    <li class="p-globalMenu__link"><a href="/contact" >CONTACT</a></li>
+  </ul>
+</nav>
+<!-- .l-main -->
+<main>
+  <div class="p-home">
+    <section class="p-home__news">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">NEWS</strong>
+        <span class="c-sectionTitle__caption">お知らせ</span>
+      </h2>
+      <ul class="p-home__newsList">
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb1.jpg" alt="thumb1">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-02-01">2030.02.01</time>
+                <span class="p-home__newsType">お知らせ</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+            </a>
           </li>
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb2.jpg" alt="thumb2">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-25">2030.01.25</time>
+                <span class="p-home__newsType">制作実績</span>
+              </p>
+              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
+            </a>
           </li>
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb3.jpg" alt="thumb3">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-10">2030.01.10</time>
+                <span class="p-home__newsType">採用</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザイナーを１名募集中です！</p>
+            </a>
           </li>
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb4.jpg" alt="thumb4">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-02-01">2030.02.01</time>
+                <span class="p-home__newsType">お知らせ</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+            </a>
           </li>
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb5.jpg" alt="thumb5">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-25">2030.01.25</time>
+                <span class="p-home__newsType">制作実績</span>
+              </p>
+              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
+            </a>
           </li>
         
-          <li class="p-photoList__contents">
-            <img class="c-photo" src="/assets/images/thumb6.jpg" alt="thumb6">
+          <li>
+            <a href="" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-10">2030.01.10</time>
+                <span class="p-home__newsType">採用</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザイナーを１名募集中です！</p>
+            </a>
           </li>
         
       </ul>
-    </div>
-    <div class="p-aboutSection">
-      <h2 class="p-aboutSection__title">自己紹介</h2>
-      <p class="c-text">
-        こんにちは、Manaです。世界中を旅しながら写真を撮っています。<a class="c-blueLink" href="">Twitter</a>や<a class="c-blueLink" href="">Facebook</a>やってます。お気軽にフォローしてください！<a class="c-blueLink" href="">ブログ</a>もチェックしてみてください。これはデモサイトです。実際は写真苦手です。はい。<br>こんにちは、Manaです。世界中を旅しながら写真を撮っています。<a class="c-blueLink" href="">Twitter</a>や<a class="c-blueLink" href="">Facebook</a>やってます。お気軽にフォローしてください！<a class="c-blueLink" href="">ブログ</a>もチェックしてみてください。これはデモサイトです。実際は写真苦手です。はい。
-      </p>
-    </div>
-  </section>
-  <table border="1">
-    <thead>
-      <tr>
-      <th>ヘッダ</th>
-      <th>ヘッダ</th>
-      <th>ヘッダ</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      <th colspan="3">本体A</th>
-      </tr>
-      <tr>
-      <td>データセル</td>
-      <td>データセル</td>
-      <td>データセル</td>
-      </tr>
-      <tr>
-      <td>データセル</td>
-      <td>データセル</td>
-      <td>データセル</td>
-      </tr>
-    </tbody>
-  </table>
-</main>
-<!-- l-footer -->
-      <footer class="l-footer">
-        <div class="p-footerLogo">
-          <p class="p-footerLogo__text">
-            By <a href="#">Mana</a><br>© 2012 <a href="#">Web Creator Box</a>
-          </p>
+    </section>
+    <section class="p-home__service">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">SERVICE</strong>
+        <span class="c-sectionTitle__caption">事業内容</span>
+      </h2>
+      <ul class="p-home__serviceList">
+        <li>
+          <div>
+            <img src="/assets/images/jessy-smith-zFOm6KzA-7g-unsplash@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+        <li>
+          <div>
+            <img src="/assets/images/luke-chesser-JKUTrJ4vK00-unsplash (1)@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+        <li>
+          <div>
+            <img src="/assets/images/pexels-cottonbro-3585088@2x-min.jpg" alt="">
+          </div>
+          <h3 class="p-home__serviceTitle">Webサイト制作</h3>
+          <p>新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。</p>
+        </li>
+      </ul>
+      <div class="c-btn">
+        <a href="/service">
+          <span class="c-btn__txt">MORE</span>
+        </a>
+      </div>
+    </section>
+    <section class="p-home__works">
+      <div class="p-home__worksHero swiper-container">
+        <ul class="p-home__worksList swiper-wrapper">
+          <li class="p-home__worksPhoto swiper-slide">
+            <img src="/assets/images/smoothiesta@2x-min.jpg" alt="">
+          </li>
+          <!-- <li class="p-home__worksPhoto swiper-slide">
+            <img src="/assets/images/web-conference01-min.jpeg" alt="">
+          </li>
+          <li class="p-home__worksPhoto swiper-slide">
+            <img src="/assets/images/lamina01-min.jpeg" alt="">
+          </li> -->
+        </ul>
+      </div>
+      <div class="p-home__worksTextArea">
+        <h2 class="c-sectionTitle">
+          <strong class="c-sectionTitle__main">WORKS</strong>
+          <span class="c-sectionTitle__caption">制作実績</span>
+        </h2>
+        <p>
+          様々なジャンルのWebサイト制作が可能です。<br>
+          ご購入やお申込み数の増加などを実現します！
+        </p>
+        <div class="c-btn">
+          <a href="/works">
+            <span class="c-btn__txt">MORE</span>
+          </a>
         </div>
-      </footer>
+      </div>
+    </section>
+    <section class="p-home__company">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">COMPANY</strong>
+        <span class="c-sectionTitle__caption">私たちについて</span>
+      </h2>
+      <p class="p-home__companyTitle">
+        サイトのゴール =<wbr>
+        夢を叶えること
+      </p>
+      <p>
+        お客様の夢を叶えること。<br>
+        それがWebサイトのゴールであり、<br class="u-sp-only">私たちが目指すことです。<br>
+        だからこそちゃんと成果を出すサイトを<br class="u-sp-only">全力でお作りします。<br>
+        お客様の笑顔を見たい。<br>
+        夢を実現する手助けをさせてください。
+      </p>
+      <div class="c-btn">
+        <a href="/company">
+          <span class="c-btn__txt">MORE</span>
+        </a>
+      </div>
+    </section>
+    <section class="p-home__recruit">
+      <div class="p-home__recruitHero">
+        <picture>
+        <source media="(max-width: 850px)" srcset="/assets/images/you-x-ventures-X8H8vPcelPk-unsplash-sp@2x-min.jpg">
+        <img src="/assets/images/you-x-ventures-X8H8vPcelPk-unsplash@2x-min.jpg" alt="">
+      </picture>
+      </div>
+      <div class="p-home__recruitTextArea">
+        <h2 class="c-sectionTitle">
+          <strong class="c-sectionTitle__main">RECRUIT</strong>
+          <span class="c-sectionTitle__caption">採用情報</span>
+        </h2>
+        <p>私たちと一緒に働きませんか？</p>
+        <div class="c-btn">
+          <a href="/recruit">
+            <span class="c-btn__txt">MORE</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+<!-- l-footer -->
+  <div class="l-main__contact">
+    <h2 class="c-sectionTitle">
+      <strong class="c-sectionTitle__main">CONTACT</strong>
+      <span class="c-sectionTitle__caption">お問合せ</span>
+    </h2>
+    <p>Webサイトの制作のご依頼やお見積りなど、<br class="u-sp-only">お気軽にご相談ください。</p>
+    <div class="c-btn">
+      <a href="/contact">
+        <span class="c-btn__txt">MORE</span>
+      </a>
     </div>
-  <script defer src="assets/javascript/bundle.js"></script></body>
+  </div>
+</main>
+<footer class="p-footer">
+  <div class="p-footer__logo">PON DESIGN</div>
+  <nav>
+    <ul class="p-footer__list">
+      <li class="p-footer__link"><a href="/news" >NEWS</a></li>
+      <li class="p-footer__link"><a href="/service" >SERVICE</a></li>
+      <li class="p-footer__link"><a href="/works" >WORKS</a></li>
+      <li class="p-footer__link"><a href="/company" >COMPANY</a></li>
+      <li class="p-footer__link"><a href="/recruit" >RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/contact" >CONTACT</a></li>
+    </ul>
+  </nav>
+  <p class="p-footer__copylight">
+    <small>© PON DESIGN</small>
+  </p>
+</footer>
+</div>
+<script defer src="assets/javascript/bundle.js"></script></body>
 </html>
 
 
