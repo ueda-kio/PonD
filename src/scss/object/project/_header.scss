@@ -25,10 +25,24 @@
     align-items: center;
     width: 100%;
     padding: 22px 15px;
+    transition: background-color .5s, padding .3s;
+    z-index: 100;
 
     @include var.mq('o-sp') {
       padding: 31px 30px;
     }
+  }
+
+  &__top.is-moved {
+    padding: 13px 15px;
+
+    @include var.mq('o-sp') {
+      padding: 18px 30px;
+    }
+  }
+
+  &__top.is-active {
+    background-color: rgba($color: #21054d, $alpha: .6);
   }
 
   &__logo {
@@ -186,7 +200,7 @@
       position: absolute;
       top: 50%;
       left: 110%;
-      width: 70px;
+      width: 75px;
       height: 1px;
       background-color: #fff;
       transform: translateY(-50%);
@@ -197,7 +211,7 @@
       bottom: 100px;
 
       &::after {
-        width: 90px;
+        width: 95px;
       }
     }
   }
