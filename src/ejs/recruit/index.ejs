@@ -1,0 +1,88 @@
+<% const title = "RECRUIT"; const description = "recruitページのdescription"; %>
+<% const page = 'recruit' %>
+<%
+  const header = {
+    title: 'RECRUIT',
+    caption: '採用情報'
+  }
+%>
+<% const path = '/assets/images/'; %>
+
+<% include ../template/_head %>
+<!-- .l-header -->
+<% include ../template/_header %>
+<main class="l-main">
+  <div class="l-main__heading">
+    <ol class="l-main__breadcrumb">
+      <li><a href="/">HOME</a></li>
+      <li><%= title %></li>
+    </ol>
+  </div>
+  <section class="p-recruit">
+    <div class="p-recruit__head">
+      <h2 class="c-sectionTitle">
+        <strong class="c-sectionTitle__main">
+          Enjoy Creation for Client
+        </strong>
+        <span class="c-sectionTitle__caption">楽しむ心が良いモノを生む</span>
+      </h2>
+      <p>
+        心を弾ましながら<br>
+        夢いっぱいのサイトを作ろう！<br>
+        お客様も自分もみんなが幸せになれるように
+      </p>
+    </div>
+    <div class="p-recruit__hero">
+      <img src="<%= path %>enjoy-min.jpg" alt="">
+    </div>
+    <div class="p-recruit__wrap">
+      <h2 class="c-title">募集中の職種</h2>
+      <div class="p-recruit__listWrap">
+        <h2 class="c-title">Webデザイナー</h2>
+        <dl class="p-company__list">
+          <div class="p-company__row">
+            <dt>雇用形態</dt>
+            <dd>正社員</dd>
+          </div>
+          <div class="p-company__row">
+            <dt>給与</dt>
+            <dd>400万円〜600万円（経験・能力を考慮のうえ優遇）</dd>
+          </div>
+          <div class="p-company__row">
+            <dt>仕事内容</dt>
+            <dd>Webサイトの制作。サイトのデザインとコーディングを担当していただきます。</dd>
+          </div>
+          <div class="p-company__row">
+            <dt>勤務時間</dt>
+            <dd>10:00 〜 19:00（実働8時間、休憩1時間）</dd>
+          </div>
+          <div class="p-company__row">
+            <dt>応募資格</dt>
+            <dd>
+              <p>
+                PhotoshopやXDなどのデザインツールの使い方を理解し、コーディングの基礎スキルがある方。<br>
+                実務未経験でも学校や独学で学習した方を歓迎します。
+              </p>
+              <ul class="p-company__innerList">
+                <li>デザインやコーディングを楽しめる方</li>
+                <li>常にアンテナを張って積極的にトレンドや最新の技術を取り入れる方</li>
+                <li>お客様と一緒に楽しみながら高い目的を目指せる方</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+        <div class="c-btn">
+          <a href="/contact">
+            <span class="c-btn__txt">MORE</span>
+          </a>
+        </div>
+        <span class="p-recruit__linkCaption">求人サイトへ遷移します</span>
+      </div>
+      <h2 class="c-title">社内ムービー</h2>
+      <div class="p-recruit__movie">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pDFkg9L5wJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+<% include ../template/_footer %>

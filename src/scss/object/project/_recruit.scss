@@ -1,0 +1,116 @@
+@use "../../foundation/var";
+
+.p-recruit {
+  padding: 40px 0 80px;
+  background: url('#{var.$bgPath}repeat-grid@2x-min.png') top left / contain;
+
+  @include var.mq('o-sp') {
+    padding: 110px 0;
+  }
+
+  &__head {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  &__head .c-sectionTitle {
+    &__main {
+      font-size: 48px;
+      line-height: 1.2;
+    }
+
+    &__caption {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    @include var.mq('o-sp') {
+      &__main {
+        font-size: 72px;
+      }
+
+      &__caption {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__hero {
+    max-width: 1250px;
+    min-width: 390px;
+    margin: 40px auto 0;
+
+    & > img {
+      mix-blend-mode: multiply
+    }
+  }
+
+  &__wrap {
+    max-width: 1150px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+
+    @include var.mq('o-sp') {
+      margin-top: 70px;
+    }
+  }
+
+  &__listWrap {
+    margin: 0 0 80px;
+    padding: 30px 20px 33px;
+    background-color: #fff;
+    border: solid 1px var.$colorBorder;
+    border-radius: 10px;
+
+    & .c-title {
+      font-size: 18px;
+    }
+
+    @include var.mq('o-sp') {
+      margin: 0 0 140px;
+      padding: 60px 20px;
+
+      & .c-title {
+        font-size: 24px;
+      }
+    }
+
+    & > .p-company__list {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    & .p-company__row > dt {
+      @include var.mq('o-sp') {
+        width: 17%;
+      }
+    }
+
+    & > .c-btn {
+      margin-top: 40px;
+
+      @include var.mq('o-sp') {
+        margin-top: 50.5px;
+      }
+    }
+  }
+
+  &__linkCaption {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  &__movie {
+    max-width: 800px;
+    height: 50vw;
+    max-height: 432px;
+    margin: 0 auto;
+  }
+
+  & + .l-main__contact {
+    margin-top: 0;
+  }
+}
