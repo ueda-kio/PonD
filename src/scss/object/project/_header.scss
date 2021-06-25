@@ -62,6 +62,10 @@
 
     & > a {
       font-weight: bold;
+
+      &[aria-current=page] {
+        color: var.$colorPurPle;
+      }
     }
   }
 
@@ -105,7 +109,7 @@
   &__mainTitle--home {
     @extend .p-header__mainTitle;
     font-size: 48px;
-    line-height: 1.4;
+    line-height: var.$narrowLineHeight;
 
     @include var.mq('u-sp') {
       max-width: 374px;

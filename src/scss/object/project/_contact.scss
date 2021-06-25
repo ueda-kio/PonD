@@ -73,7 +73,9 @@
 
   &__radiolabel {
     position: relative;
+    display: inline-block;
     padding-left: 25px;
+    line-height: var.$narrowLineHeight;
     cursor: pointer;
 
     &::before {
@@ -169,7 +171,6 @@
     border: solid 1px #aaa;
     background-color: #fff;
     text-align: start;
-    line-height: 1.7;
     overflow-y: auto;
 
     & > figure {

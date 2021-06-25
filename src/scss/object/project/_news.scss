@@ -10,9 +10,10 @@
   &__list {
     max-width: 915px;
     margin: 0 auto;
-    border-bottom: solid 1px var.$colorBorder;
+    border-bottom: solid 1px #ddd;
+
     & > li + li {
-      border-top: solid 1px var.$colorBorder;
+      border-top: solid 1px #ddd;
     }
   }
 

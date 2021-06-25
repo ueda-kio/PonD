@@ -16,7 +16,7 @@
   &__head .c-sectionTitle {
     &__main {
       font-size: 48px;
-      line-height: 1.2;
+      line-height: var.$narrowLineHeight;
     }
 
     &__caption {

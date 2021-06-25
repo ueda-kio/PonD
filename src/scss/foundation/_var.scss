@@ -32,6 +32,9 @@ $colorBlack: #222;
 $colorGray: #f0f0f0;
 $colorBorder: #b8aed5;
 
+// line-height
+$narrowLineHeight: 1.2;
+
 // mixin
 @mixin hoverBorder {
   & a {
