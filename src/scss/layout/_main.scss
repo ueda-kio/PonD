@@ -38,6 +38,15 @@
         transform: rotate(-30deg) translateY(2px);
       }
     }
+
+    & > li > a {
+      transition: color .3s;
+
+      &:hover {
+        color: #bc99ff;
+        text-decoration: none;
+      }
+    }
   }
 
   &__contact {
