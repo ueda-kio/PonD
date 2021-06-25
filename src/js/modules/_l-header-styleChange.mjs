@@ -15,11 +15,14 @@ export const headerStyleChanger = () => {
   const toggleHeaderPadding = () => {
     const scrollHeight = window.pageYOffset;
     const headerTop = document.querySelector('.p-header__top');
+    const menu = document.querySelector('.p-hamburgerMenu');
 
     if(scrollHeight !== 0 && !headerTop.classList.contains('is-moved')) {
       headerTop.classList.add('is-moved');
+      menu.classList.add('is-moved');
     } else if (scrollHeight === 0 && headerTop.classList.contains('is-moved')) {
       headerTop.classList.remove('is-moved');
+      menu.classList.remove('is-moved');
     }
   };
 

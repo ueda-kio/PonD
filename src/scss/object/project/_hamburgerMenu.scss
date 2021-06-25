@@ -2,25 +2,96 @@
 
 .p-hamburgerMenu {
   position: fixed;
-  top: 8px;
+  top: 15px;
   right: 15px;
   display: block;
   padding: 0;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 100;
+  z-index: 300;
+  transition: top .3s;
 
   @include var.mq('o-sp') {
     display: none;
   }
 
+  &.is-moved {
+    top: 8px;
+  }
+
   &__txt {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
     display: block;
     margin-top: -3px;
     color: #fff;
     font-family: "Montserrat";
     font-size: 10px;
     font-weight: bold;
+    transform: translateX(-50%);
+    transition: visibility .2s, opacity .2s;
+
+    &--open,
+    &--close {
+      @extend .p-hamburgerMenu__txt;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    & > .p-hamburgerMenu__txt {
+      visibility: hidden;
+      opacity: 0;
+    }
+    & > .p-hamburgerMenu__txt--open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &.is-open {
+    .p-hamburgerMenu {
+      &__txt,
+      &__txt--open {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:hover {
+        & > .p-hamburgerMenu__txt--open {
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        & > .p-hamburgerMenu__txt--close {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &__txt--close {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+html[data-scroll-disabled=true] .p-hamburgerMenu {
+  & .c-hamburgerMenu::before {
+    transform: translate(-49%, 350%) rotate(-30deg);
+    width: 28px;
+  }
+
+  & .c-hamburgerMenu::after {
+    transform: translate(-50%, -250%) rotate(30deg);
+    width: 28px;
+  }
+
+  & .c-hamburgerMenu__text::before {
+    opacity: 0;
   }
 }

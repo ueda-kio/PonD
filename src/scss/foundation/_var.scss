@@ -60,5 +60,10 @@ $narrowLineHeight: 1.2;
       visibility: visible;
       transform: scaleX(1);
     }
+
+    &:focus::after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
 }

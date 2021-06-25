@@ -17,6 +17,7 @@
     background-color: #fff;
     content: "";
     transform: translateX(-50%);
+    transition: transform .3s, opacity .3s, width .3s;
   }
 
   &::after {
