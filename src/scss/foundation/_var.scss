@@ -33,4 +33,29 @@ $colorGray: #f0f0f0;
 $colorBorder: #b8aed5;
 
 // mixin
+@mixin hoverBorder {
+  & a {
+    position: relative;
+    display: block;
+    text-decoration: none;
 
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      visibility: hidden;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+}
