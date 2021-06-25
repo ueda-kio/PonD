@@ -7,24 +7,6 @@
 <!-- .l-header -->
 <% include ./template/_header_home %>
 <!-- .l-main -->
-<button class="p-hamburgerMenu js-menuTrigger" tabindex="2">
-  <div class="c-hamburgerMenu">
-    <span class="c-hamburgerMenu__text">ユーザーメニュー</span>
-  </div>
-  <span class="p-hamburgerMenu__txt">MENU</span>
-  <span class="p-hamburgerMenu__txt--open">OPEN</span>
-  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
-</button>
-<nav class="p-globalMenu">
-  <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link"><a href="/news" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a></li>
-    <li class="p-globalMenu__link"><a href="/service" <%= page === 'recruit' ? 'aria-current=page' : '' %>>SERVICE</a></li>
-    <li class="p-globalMenu__link"><a href="/works" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a></li>
-    <li class="p-globalMenu__link"><a href="/company" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a></li>
-    <li class="p-globalMenu__link"><a href="/recruit" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a></li>
-    <li class="p-globalMenu__link"><a href="/contact" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a></li>
-  </ul>
-</nav>
 <main>
   <div class="p-home">
     <section class="p-home__news">
@@ -75,7 +57,7 @@
         </li>
       </ul>
       <div class="c-btn">
-        <a href="/contact">
+        <a href="/service">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
@@ -96,15 +78,15 @@
       </div>
       <div class="p-home__worksTextArea">
         <h2 class="c-sectionTitle">
-          <strong class="c-sectionTitle__main">SERVICE</strong>
-          <span class="c-sectionTitle__caption">事業内容</span>
+          <strong class="c-sectionTitle__main">WORKS</strong>
+          <span class="c-sectionTitle__caption">制作実績</span>
         </h2>
         <p>
           様々なジャンルのWebサイト制作が可能です。<br>
           ご購入やお申込み数の増加などを実現します！
         </p>
         <div class="c-btn">
-          <a href="/contact">
+          <a href="/works">
             <span class="c-btn__txt">MORE</span>
           </a>
         </div>
@@ -127,7 +109,7 @@
         夢を実現する手助けをさせてください。
       </p>
       <div class="c-btn">
-        <a href="/contact">
+        <a href="/company">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
@@ -146,7 +128,7 @@
         </h2>
         <p>私たちと一緒に働きませんか？</p>
         <div class="c-btn">
-          <a href="/contact">
+          <a href="/recruit">
             <span class="c-btn__txt">MORE</span>
           </a>
         </div>
