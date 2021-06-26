@@ -4,6 +4,9 @@ export const GlobalMenu = () => {
   const html = document.documentElement;
   const trigger = document.querySelector('.js-menuTrigger');
 
+  /**
+   * @param {}
+   */
   const toggleMenu = (e) => {
     e.currentTarget.classList.toggle('is-open');
     document.querySelector('.p-globalMenu').classList.toggle('is-open');
@@ -23,7 +26,11 @@ export const GlobalMenu = () => {
     });
 
     trigger.addEventListener('keydown', (e) => {
-      if(e.key !== 'Enter') return false;
+      if(e.key === 'Enter') {
+        toggleMenu(e);
+      } else {
+        return false;
+      }
       toggleMenu(e);
     });
   };

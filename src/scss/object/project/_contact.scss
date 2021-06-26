@@ -184,6 +184,7 @@
 
   &__checklabel {
     position: relative;
+    display: inline-block;
     padding-left: 30px;
 
     &::before {
@@ -202,7 +203,7 @@
     &::after {
       content: '';
       position: absolute;
-      top: 3px;
+      top: 50%;
       left: 4px;
       z-index: 2;
       border-radius: 2px;
@@ -211,7 +212,7 @@
       width: 15px;
       height: 10px;
       opacity: 0;
-      transform: rotate(-45deg) translateY(-2px);
+      transform: rotate(-45deg) translate(30%, -65%);
     }
   }
 

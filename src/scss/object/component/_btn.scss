@@ -1,10 +1,14 @@
 @use "../../foundation/var";
 
 .c-btn {
-  width: 220px;
+  width: 200px;
   height: 60px;
   margin: 30px auto 0;
   text-align: center;
+
+  @include var.mq('o-sp') {
+    width: 220px;
+  }
 
   & > a {
     display: block;
@@ -48,6 +52,11 @@
       border: solid 1px #fff;
       box-shadow: 0 0 8px gray;
       color: #000;
+
+      & > svg {
+        right: 18px;
+        color: #000;
+      }
     }
   }
 
