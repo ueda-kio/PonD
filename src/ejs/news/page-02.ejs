@@ -21,7 +21,7 @@
   </div>
   <section class="p-news">
     <ul class="p-news__list">
-      <% for(let i = 0; i < 10; i++){ %>
+      <% for(let i = 10; i < 20; i++){ %>
       <% if(!arrayNews[i]) break; %>
         <li>
           <a href="news/<%= arrayNews[i].href %>" class="p-news__link">
@@ -35,10 +35,8 @@
       <% } %>
     </ul>
     <ol class="p-news__nav">
-      <li class="p-news__pagenation--current"><a><b>1</b></a></li>
-      <% if(arrayNews.length > 10 ) { %>
-      <li class="p-news__pagenation"><a href="/news/page-02.html">2</a></li>
-      <% } %>
+      <li class="p-news__pagenation"><a href="/news">1</a></li>
+      <li class="p-news__pagenation--current"><a><b>2</b></a></li>
       <% if(arrayNews.length > 20 ) { %>
       <li class="p-news__pagenation"><a href="/news/page-03.html">3</a></li>
       <% } %>
