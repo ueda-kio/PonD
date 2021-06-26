@@ -10,6 +10,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    padding: 0 35px;
     border-radius: 50px;
     background-image: linear-gradient(to right, #7633a4 0%, #250d65 100%);
     text-decoration: none;
@@ -22,6 +23,10 @@
       border: solid 1px #fff;
       box-shadow: 0 0 8px gray;
       color: #000;
+
+      & > svg {
+        color: #000;
+      }
     }
   }
 
@@ -50,6 +55,16 @@
     font-size: 14px;
     font-weight: bold;
     line-height: 60px;
+    z-index: 10;
+  }
+
+  & svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+    transition: color .2s;
     z-index: 10;
   }
 }
