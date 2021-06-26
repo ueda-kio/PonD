@@ -64,7 +64,7 @@
     </button>
   </div>
   <nav class="p-article__pageNav">
-    <ul class="p-article__linkList">
+    <ol class="p-article__linkList">
       <li class="p-article__linkToOtherPage">
         <% if(pageNumber === 0) { %>
         <% } else { %>
@@ -76,7 +76,7 @@
         <a href="<%= arrayNews[pageNumber + 1].href %>"><%= arrayNews[pageNumber + 1].title %></a>
         <i class="fas fa-chevron-right"></i>
       </li>
-    </ul>
+    </ol>
     <p class="p-article__toHome">
       <a href="/news">NEWS一覧</a>
     </p>
