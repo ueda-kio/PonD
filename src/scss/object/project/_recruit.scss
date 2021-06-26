@@ -53,7 +53,6 @@
   }
 
   &__listWrap {
-    margin: 0 0 80px;
     padding: 30px 20px 33px;
     background-color: #fff;
     border: solid 1px var.$colorBorder;
@@ -64,7 +63,6 @@
     }
 
     @include var.mq('o-sp') {
-      margin: 0 0 140px;
       padding: 60px 20px;
 
       & .c-title {
@@ -97,13 +95,6 @@
     margin-top: 10px;
     font-size: 12px;
     text-align: center;
-  }
-
-  &__movie {
-    max-width: 800px;
-    height: 50vw;
-    max-height: 432px;
-    margin: 0 auto;
   }
 
   & + .l-main__contact {
