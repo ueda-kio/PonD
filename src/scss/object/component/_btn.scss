@@ -25,6 +25,7 @@
       color: #000;
 
       & > svg {
+        right: 18px;
         color: #000;
       }
     }
@@ -62,9 +63,9 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 20px;
+    right: 22px;
     margin: auto;
-    transition: color .2s;
+    transition: color .2s, right .3s;
     z-index: 10;
   }
 }
