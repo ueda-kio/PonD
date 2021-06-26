@@ -11,7 +11,7 @@
 
   &__listItem {
     &:nth-of-type(n + 2) {
-      margin-top: 50px;
+      margin-top: 70px;
     }
 
     @include var.mq('o-sp') {
@@ -20,7 +20,7 @@
       column-gap: 50px;
 
       &:nth-of-type(n + 2) {
-        margin-top: 60px;
+        margin-top: 100px;
       }
     }
   }
