@@ -23,7 +23,7 @@
     <ul class="p-news__list">
       <% arrayNews.forEach(el => { %>
         <li>
-          <a href="" class="p-news__link">
+          <a href="news/<%= el.href %>" class="p-news__link">
             <p class="p-news__data">
               <time datetime="<%= el.dateTime %>"><%= el.date %></time>
               <span class="p-news__type"><%= el.type %></span>
@@ -39,5 +39,4 @@
       <li class="p-news__pagenation"><a href="/news/page03.html">3</a></li>
     </ol>
   </section>
-//TODO page分け
 <% include ../template/_footer %>

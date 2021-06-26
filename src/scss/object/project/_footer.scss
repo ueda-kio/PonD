@@ -45,8 +45,8 @@
       }
     }
 
-    & > a[aria-current=page] {
-      color: var.$colorPurPle;
+    & > a[aria-current='page'] {
+      color: var.$colorPurple;
     }
   }
 
@@ -60,7 +60,7 @@
 
     & > small {
       font-size: 10px;
-      color: var.$colorPurPle;
+      color: var.$colorPurple;
     }
   }
 }

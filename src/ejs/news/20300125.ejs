@@ -1,0 +1,85 @@
+<% const title = "news - お知らせ"; const description = "20300125ページのdescription"; %>
+<% const page = 'news' %>
+<%
+  const header = {
+    title: 'NEWS',
+    caption: 'お知らせ'
+  }
+%>
+<% include ../template/_arrayNews %>
+<% const pageNumber = 1; %>
+<% const path = '/assets/images/'; %>
+
+<% include ../template/_head %>
+<!-- .l-header -->
+<% include ../template/_header %>
+<main class="l-main">
+  <div class="l-main__heading">
+    <ol class="l-main__breadcrumb">
+      <li><a href="/">HOME</a></li>
+      <li><a href="/news">NEWS</a></li>
+      <li><%= arrayNews[pageNumber].title %></li>
+    </ol>
+  </div>
+<section class="p-article">
+  <h2 class="p-article__title"><%= arrayNews[pageNumber].title %></h2>
+  <p class="p-article__data">
+    <time datetime="<%= arrayNews[pageNumber].dateTime %>"><%= arrayNews[pageNumber].date %></time>
+    <span class="p-article__newsType"><%= arrayNews[pageNumber].type %></span>
+  </p>
+  <div class="p-article__hero">
+    <img src="<%= path %><%= arrayNews[pageNumber].photo.src %>" alt="<%= arrayNews[pageNumber].photo.alt %>">
+  </div>
+  <article class="p-article__wrap">
+    <p>
+      テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+    </p>
+    <h3 class="p-article__articleHeading">大見出し</h3>
+    <p>
+      テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+    </p>
+    <h4 class="p-article__articleSubHeading">小見出し</h4>
+    <p>
+      テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+    </p>
+    <p>
+      テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+    </p>
+  </article>
+  <div class="p-article__pagerList">
+    <button class="c-shareBtn--good">
+      <i class="fas fa-thumbs-up"></i>
+      <small>いいね！</small>
+    </button>
+    <button class="c-shareBtn--facebook">
+      <i class="fab fa-facebook"></i>
+      <small>シェア</small>
+    </button>
+    <button class="c-shareBtn--twitter">
+      <i class="fab fa-twitter"></i>
+      <small>ツイート</small>
+    </button>
+    <button class="c-shareBtn--line">
+      <i class="fab fa-line"></i>
+    </button>
+  </div>
+  <nav class="p-article__pageNav">
+    <ul class="p-article__linkList">
+      <li class="p-article__linkToOtherPage">
+        <% if(pageNumber === 0) { %>
+        <% } else { %>
+        <i class="fas fa-chevron-left"></i>
+        <a href="<%= arrayNews[pageNumber - 1].href %>"><%= arrayNews[pageNumber - 1].title %></a>
+        <% } %>
+      </li>
+      <li class="p-article__linkToOtherPage">
+        <a href="<%= arrayNews[pageNumber + 1].href %>"><%= arrayNews[pageNumber + 1].title %></a>
+        <i class="fas fa-chevron-right"></i>
+      </li>
+    </ul>
+    <p class="p-article__toHome">
+      <a href="/news">NEWS一覧</a>
+    </p>
+  </nav>
+</section>
+<% include ../template/_footer %>

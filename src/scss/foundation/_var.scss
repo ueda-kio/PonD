@@ -25,7 +25,7 @@ $breakpoints: (
 $bgPath: '/assets/images/';
 
 // COLOR
-$colorPurPle: #a798b7;
+$colorPurple: #a798b7;
 $colorNormal: #2496cd;
 $colorDark: #012c45;
 $colorBlack: #222;
@@ -53,7 +53,7 @@ $narrowLineHeight: 1.2;
       visibility: hidden;
       transform-origin: left;
       transform: scaleX(0);
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
     &:hover::after {
@@ -74,13 +74,13 @@ $narrowLineHeight: 1.2;
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
 
   &::before {

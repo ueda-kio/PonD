@@ -4,7 +4,8 @@
   position: relative;
   width: 100%;
   height: 200px;
-  background: url('#{var.$bgPath}hero_page@2x-min.jpg') no-repeat top center / cover;
+  background: url('#{var.$bgPath}hero_page@2x-min.jpg') no-repeat top center /
+    cover;
   color: #fff;
 
   @include var.mq('o-sp') {
@@ -25,7 +26,7 @@
     align-items: center;
     width: 100%;
     padding: 22px 15px;
-    transition: background-color .5s, padding .3s;
+    transition: background-color 0.5s, padding 0.3s;
     z-index: 100;
 
     @include var.mq('o-sp') {
@@ -42,7 +43,7 @@
   }
 
   &__top.is-active {
-    background-color: rgba($color: #21054d, $alpha: .6);
+    background-color: rgba($color: #21054d, $alpha: 0.6);
   }
 
   &__logo {
@@ -77,12 +78,11 @@
     & > a {
       font-weight: bold;
 
-      &[aria-current=page] {
-        color: var.$colorPurPle;
+      &[aria-current='page'] {
+        color: var.$colorPurple;
       }
     }
   }
-
 
   &__title {
     position: absolute;
@@ -173,7 +173,6 @@
   }
 
   &__linkBtn .c-btn {
-
     @include var.mq('u-sp') {
       margin: 0;
     }
@@ -204,7 +203,8 @@
       height: 1px;
       background-color: #fff;
       transform: translateY(-50%);
-      animation: extendBorder 1.5s cubic-bezier(1, 0, 0, 1) 0s infinite backwards;
+      animation: extendBorder 1.5s cubic-bezier(1, 0, 0, 1) 0s infinite
+        backwards;
     }
 
     @include var.mq('o-sp') {

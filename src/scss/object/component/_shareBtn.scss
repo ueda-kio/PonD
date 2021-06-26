@@ -1,0 +1,42 @@
+.c-shareBtn {
+  display: inline-block;
+  height: 25px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  transition: box-shadow .2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+  }
+
+  &--good {
+    @extend .c-shareBtn;
+    background-color: rgb(46, 119, 241);
+  }
+
+  &--facebook {
+    @extend .c-shareBtn;
+    background-color: #3b5998;
+  }
+
+  &--twitter {
+    @extend .c-shareBtn;
+    background-color: #1da1f2;
+  }
+
+  &--line {
+    @extend .c-shareBtn;
+    height: 30px;
+    padding: 0 5px;
+    background-color: #06c755;
+
+    & > svg {
+      width: 1.5rem !important;
+      height: 1.5rem !important;
+    }
+  }
+}
+
