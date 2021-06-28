@@ -6,34 +6,34 @@
 <!DOCTYPE html>
 <html lang="ja" data-scroll-disabled="false">
 <head>
-<meta charset="UTF-8" />
-<meta name="description" content="トップのdescription" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="/assets/images/favicon.ico" />
-<!--facebook用-->
-<meta property="og:title" content="TOP" />
-<meta property="og:description" content="トップのdescription" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="" /><!--絶対パスで記述-->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="TOP" />
-<meta property="og:locale" content="ja_JP" />
-<!--twitter用-->
-<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
-<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
-<meta name="twitter:title" content="TOP" />
-<meta name="twitter:url" content="" />
-<meta name="twitter:description" content="トップのdescription" />
-<meta name="twitter:image" content="" /><!--絶対パスで記述-->
+<meta charset="UTF-8">
+<meta name="description" content="トップのdescription">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/assets/images/favicon.ico">
+
+<meta property="og:title" content="TOP">
+<meta property="og:description" content="トップのdescription">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TOP">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="TOP">
+<meta name="twitter:url" content="">
+<meta name="twitter:description" content="トップのdescription">
+<meta name="twitter:image" content="">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
 
 <title>TOP</title>
-<link href="assets/stylesheet/bundle.css" rel="stylesheet"></head>
+<link href="assets/stylesheet/bundle.69a1e1a56b688482c449.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrapper">
-<!-- .l-header -->
+
 <header class="p-header--home">
   <div class="p-header__top">
     <div class="p-header__logo">
@@ -41,12 +41,24 @@
     </div>
     <nav>
       <ul class="p-header__nav">
-        <li class="p-header__link"><a href="/news" >NEWS</a></li>
-        <li class="p-header__link"><a href="/service" >SERVICE</a></li>
-        <li class="p-header__link"><a href="/works" >WORKS</a></li>
-        <li class="p-header__link"><a href="/company" >COMPANY</a></li>
-        <li class="p-header__link"><a href="/recruit" >RECRUIT</a></li>
-        <li class="p-header__link"><a href="/contact" >CONTACT</a></li>
+        <li class="p-header__link">
+          <a href="/news">NEWS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/service">SERVICE</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/works">WORKS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/company">COMPANY</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/recruit">RECRUIT</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/contact">CONTACT</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -61,6 +73,7 @@
       <div class="c-btn">
         <a href="/contact">
           <span class="c-btn__txt">CONTACT</span>
+          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </div>
@@ -69,7 +82,7 @@
     <span>SCROLL</span>
   </div>
 </header>
-<button class="p-hamburgerMenu js-menuTrigger" tabindex="2">
+<button class="p-hamburgerMenu js-menuTrigger" tabindex="2" aria-controls="global-menu-panel" aria-expanded="false">
   <div class="c-hamburgerMenu">
     <span class="c-hamburgerMenu__text">メニュー</span>
   </div>
@@ -77,17 +90,29 @@
   <span class="p-hamburgerMenu__txt--open">OPEN</span>
   <span class="p-hamburgerMenu__txt--close">CLOSE</span>
 </button>
-<nav class="p-globalMenu">
+<nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link"><a href="/news" >NEWS</a></li>
-    <li class="p-globalMenu__link"><a href="/service" >SERVICE</a></li>
-    <li class="p-globalMenu__link"><a href="/works" >WORKS</a></li>
-    <li class="p-globalMenu__link"><a href="/company" >COMPANY</a></li>
-    <li class="p-globalMenu__link"><a href="/recruit" >RECRUIT</a></li>
-    <li class="p-globalMenu__link"><a href="/contact" >CONTACT</a></li>
+    <li class="p-globalMenu__link">
+      <a href="/news" tabindex="2">NEWS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/service" tabindex="2">SERVICE</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/works" tabindex="2">WORKS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/company" tabindex="2">COMPANY</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/recruit" tabindex="2">RECRUIT</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/contact" tabindex="2">CONTACT</a>
+    </li>
   </ul>
 </nav>
-<!-- .l-main -->
+
 <main>
   <div class="p-home">
     <section class="p-home__news">
@@ -98,7 +123,7 @@
       <ul class="p-home__newsList">
         
           <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/20300201.html" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="2030-02-01">2030.02.01</time>
                 <span class="p-home__newsType">お知らせ</span>
@@ -108,17 +133,7 @@
           </li>
         
           <li>
-            <a href="" class="p-home__newsLink">
-              <p class="p-home__newsData">
-                <time datetime="2030-01-25">2030.01.25</time>
-                <span class="p-home__newsType">制作実績</span>
-              </p>
-              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
-            </a>
-          </li>
-        
-          <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/20300110.html" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="2030-01-10">2030.01.10</time>
                 <span class="p-home__newsType">採用</span>
@@ -128,7 +143,17 @@
           </li>
         
           <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/20300125.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-25">2030.01.25</time>
+                <span class="p-home__newsType">制作実績</span>
+              </p>
+              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300201.html" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="2030-02-01">2030.02.01</time>
                 <span class="p-home__newsType">お知らせ</span>
@@ -138,7 +163,7 @@
           </li>
         
           <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/20300125.html" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="2030-01-25">2030.01.25</time>
                 <span class="p-home__newsType">制作実績</span>
@@ -148,12 +173,82 @@
           </li>
         
           <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/20300110.html" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="2030-01-10">2030.01.10</time>
                 <span class="p-home__newsType">採用</span>
               </p>
               <p class="p-home__newsTitle">Webデザイナーを１名募集中です！</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300201.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-02-01">2030.02.01</time>
+                <span class="p-home__newsType">お知らせ</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300125.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-25">2030.01.25</time>
+                <span class="p-home__newsType">制作実績</span>
+              </p>
+              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300110.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-10">2030.01.10</time>
+                <span class="p-home__newsType">採用</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザイナーを１名募集中です！</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300201.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-02-01">2030.02.01</time>
+                <span class="p-home__newsType">お知らせ</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300125.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-25">2030.01.25</time>
+                <span class="p-home__newsType">制作実績</span>
+              </p>
+              <p class="p-home__newsTitle">Smoothiesta様のWebサイトを制作いたしました</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300110.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-01-10">2030.01.10</time>
+                <span class="p-home__newsType">採用</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザイナーを１名募集中です！</p>
+            </a>
+          </li>
+        
+          <li>
+            <a href="/news/20300201.html" class="p-home__newsLink">
+              <p class="p-home__newsData">
+                <time datetime="2030-02-01">2030.02.01</time>
+                <span class="p-home__newsType">お知らせ</span>
+              </p>
+              <p class="p-home__newsTitle">Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
             </a>
           </li>
         
@@ -190,6 +285,7 @@
       <div class="c-btn">
         <a href="/service">
           <span class="c-btn__txt">MORE</span>
+          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </section>
@@ -199,13 +295,24 @@
           <li class="p-home__worksPhoto swiper-slide">
             <img src="/assets/images/smoothiesta@2x-min.jpg" alt="">
           </li>
-          <!-- <li class="p-home__worksPhoto swiper-slide">
+          <li class="p-home__worksPhoto swiper-slide">
             <img src="/assets/images/web-conference01-min.jpeg" alt="">
           </li>
           <li class="p-home__worksPhoto swiper-slide">
             <img src="/assets/images/lamina01-min.jpeg" alt="">
-          </li> -->
+          </li>
         </ul>
+        <button class="p-home__swiperBtn--prev"><span class="p-home__swiperArrow"></span></button>
+        <button class="p-home__swiperBtn--next"><span class="p-home__swiperArrow"></span></button>
+        <div class="swiper-pagination p-home__swiperPagination"></div>
+        <span class="p-home__swiperAutoBtn is-play" aria-label="Start automatic slide show">
+          <button class="p-home__swiperAutoBtn--pause">
+            <i class="fas fa-pause-circle"></i>
+          </button>
+          <button class="p-home__swiperAutoBtn--play">
+            <i class="fas fa-play-circle"></i>
+          </button>
+        </span>
       </div>
       <div class="p-home__worksTextArea">
         <h2 class="c-sectionTitle">
@@ -219,6 +326,7 @@
         <div class="c-btn">
           <a href="/works">
             <span class="c-btn__txt">MORE</span>
+            <i class="fas fa-angle-right"></i>
           </a>
         </div>
       </div>
@@ -242,6 +350,7 @@
       <div class="c-btn">
         <a href="/company">
           <span class="c-btn__txt">MORE</span>
+          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </section>
@@ -261,12 +370,13 @@
         <div class="c-btn">
           <a href="/recruit">
             <span class="c-btn__txt">MORE</span>
+            <i class="fas fa-angle-right"></i>
           </a>
         </div>
       </div>
     </section>
   </div>
-<!-- l-footer -->
+
   <div class="l-main__contact">
     <h2 class="c-sectionTitle">
       <strong class="c-sectionTitle__main">CONTACT</strong>
@@ -276,6 +386,7 @@
     <div class="c-btn">
       <a href="/contact">
         <span class="c-btn__txt">MORE</span>
+        <i class="fas fa-angle-right"></i>
       </a>
     </div>
   </div>
@@ -284,12 +395,12 @@
   <div class="p-footer__logo">PON DESIGN</div>
   <nav>
     <ul class="p-footer__list">
-      <li class="p-footer__link"><a href="/news" >NEWS</a></li>
-      <li class="p-footer__link"><a href="/service" >SERVICE</a></li>
-      <li class="p-footer__link"><a href="/works" >WORKS</a></li>
-      <li class="p-footer__link"><a href="/company" >COMPANY</a></li>
-      <li class="p-footer__link"><a href="/recruit" >RECRUIT</a></li>
-      <li class="p-footer__link"><a href="/contact" >CONTACT</a></li>
+      <li class="p-footer__link"><a href="/news">NEWS</a></li>
+      <li class="p-footer__link"><a href="/service">SERVICE</a></li>
+      <li class="p-footer__link"><a href="/works">WORKS</a></li>
+      <li class="p-footer__link"><a href="/company">COMPANY</a></li>
+      <li class="p-footer__link"><a href="/recruit">RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/contact">CONTACT</a></li>
     </ul>
   </nav>
   <p class="p-footer__copylight">
@@ -297,7 +408,5 @@
   </p>
 </footer>
 </div>
-<script defer src="assets/javascript/bundle.js"></script></body>
+<script defer="defer" src="assets/javascript/bundle.da55ad0ccf16542f1073.js"></script></body>
 </html>
-
-
