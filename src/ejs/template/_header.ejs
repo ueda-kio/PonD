@@ -5,12 +5,24 @@
     </div>
     <nav>
       <ul class="p-header__nav">
-        <li class="p-header__link"><a href="/news" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a></li>
-        <li class="p-header__link"><a href="/service" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a></li>
-        <li class="p-header__link"><a href="/works" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a></li>
-        <li class="p-header__link"><a href="/company" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a></li>
-        <li class="p-header__link"><a href="/recruit" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a></li>
-        <li class="p-header__link"><a href="/contact" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a></li>
+        <li class="p-header__link">
+          <a href="/news" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/service" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/works" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/company" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/recruit" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/contact" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -21,7 +33,7 @@
     <p class="p-header__caption"><%= header.caption %></p>
   </div>
 </header>
-<button class="p-hamburgerMenu js-menuTrigger" tabindex="2">
+<button class="p-hamburgerMenu js-menuTrigger" tabindex="2" aria-controls="global-menu-panel" aria-expanded="false">
   <div class="c-hamburgerMenu">
     <span class="c-hamburgerMenu__text">メニュー</span>
   </div>
@@ -29,13 +41,25 @@
   <span class="p-hamburgerMenu__txt--open">OPEN</span>
   <span class="p-hamburgerMenu__txt--close">CLOSE</span>
 </button>
-<nav class="p-globalMenu">
+<nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link"><a href="/news" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a></li>
-    <li class="p-globalMenu__link"><a href="/service" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a></li>
-    <li class="p-globalMenu__link"><a href="/works" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a></li>
-    <li class="p-globalMenu__link"><a href="/company" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a></li>
-    <li class="p-globalMenu__link"><a href="/recruit" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a></li>
-    <li class="p-globalMenu__link"><a href="/contact" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a></li>
+    <li class="p-globalMenu__link">
+      <a href="/news" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/service" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/works" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/company" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/recruit" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/contact" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a>
+    </li>
   </ul>
 </nav>

@@ -9,13 +9,19 @@ export const GlobalMenu = () => {
    */
   const toggleMenu = (e) => {
     e.currentTarget.classList.toggle('is-open');
-    document.querySelector('.p-globalMenu').classList.toggle('is-open');
+    const globalMenu = document.querySelector('.p-globalMenu');
+
+    globalMenu.classList.toggle('is-open');
 
     if(html.getAttribute('data-scroll-disabled') !== 'true') {
       html.setAttribute('data-scroll-disabled', 'true');
+      trigger.setAttribute('aria-expanded', 'true');
+      globalMenu.hidden = false;
       setScrollStop();
     }else {
       html.setAttribute('data-scroll-disabled', 'false');
+      trigger.setAttribute('aria-expanded', 'false');
+      globalMenu.hidden = true;
       removeScrollStop();
     }
   };
