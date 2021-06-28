@@ -17,7 +17,7 @@
       <ul class="p-home__newsList">
         <% arrayNews.forEach(el => { %>
           <li>
-            <a href="" class="p-home__newsLink">
+            <a href="/news/<%= el.href %>" class="p-home__newsLink">
               <p class="p-home__newsData">
                 <time datetime="<%= el.dateTime %>"><%= el.date %></time>
                 <span class="p-home__newsType"><%= el.type %></span>
