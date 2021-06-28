@@ -1,5 +1,5 @@
 import {dom, library} from '@fortawesome/fontawesome-svg-core';
-import {faAngleRight, faExternalLinkAlt, faAngleDoubleRight, faThumbsUp, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import {faAngleRight, faExternalLinkAlt, faAngleDoubleRight, faThumbsUp, faChevronLeft, faChevronRight, faPauseCircle, faPlayCircle} from '@fortawesome/free-solid-svg-icons';
 import {faFacebook, faTwitter, faLine} from '@fortawesome/free-brands-svg-icons';
 
 export const importFontAwesome = () => {
@@ -13,7 +13,9 @@ export const importFontAwesome = () => {
       faTwitter,
       faLine,
       faChevronLeft,
-      faChevronRight
+      faChevronRight,
+      faPauseCircle,
+      faPlayCircle
     );
 
   dom.i2svg();
