@@ -140,6 +140,15 @@ input, textarea, select {
   appearance: none;
 }
 
+button {
+  padding: 0;
+  border: 0;
+}
+
 textarea {
   resize: none;
+}
+
+[hidden] {
+  display: none;
 }
