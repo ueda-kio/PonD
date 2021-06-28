@@ -10,7 +10,8 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "dev": "webpack --mode=development",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production",
+    "mkscss": "node createScssFile.js"
   },
   "keywords": [],
   "author": "",
