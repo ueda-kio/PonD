@@ -22,7 +22,15 @@
 <meta name="twitter:description" content="<%= description %>" />
 <meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" as="style">
+<% if(page === 'home') { %>
+<link rel="preload" href="<%= path %>hero@2x.jpg" as="image">
+<% } else { %>
+<link rel="preload" href="<%= path %>hero_page@2x-min.jpg" as="image">
+<% } %>
+<% if(page === 'recruit') { %>
+<link rel="preload" href="<%= path %>repeat-grid@2x-min.png" as="image">
+<% } %>
 <script src="https://kit.fontawesome.com/1f3bba6d72.js" crossorigin="anonymous"></script>
 <title><%= title %></title>
 </head>
