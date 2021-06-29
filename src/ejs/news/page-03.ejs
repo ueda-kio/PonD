@@ -35,9 +35,15 @@
       <% } %>
     </ul>
     <ol class="p-news__nav">
-      <li class="p-news__pagenation--current"><a><b>1</b></a></li>
-      <li class="p-news__pagenation"><a href="/news/page02.html">2</a></li>
-      <li class="p-news__pagenation"><a href="/news/page03.html">3</a></li>
+      <li class="p-news__pagenation">
+        <a href="/news" class="p-news__otherPageLink">1</a>
+      </li>
+      <li class="p-news__pagenation">
+        <a href="/news/page-02.html" class="p-news__otherPageLink">2</a>
+      </li>
+      <li class="p-news__pagenation--current">
+        <span class="p-news__otherPageLink"><b>3</b></span>
+      </li>
     </ol>
   </section>
 <% include ../template/_footer %>

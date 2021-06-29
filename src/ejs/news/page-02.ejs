@@ -35,10 +35,16 @@
       <% } %>
     </ul>
     <ol class="p-news__nav">
-      <li class="p-news__pagenation"><a href="/news">1</a></li>
-      <li class="p-news__pagenation--current"><a><b>2</b></a></li>
+      <li class="p-news__pagenation">
+        <a href="/news" class="p-news__otherPageLink">1</a>
+      </li>
+      <li class="p-news__pagenation--current">
+        <span class="p-news__otherPageLink"><b>2</b></span>
+      </li>
       <% if(arrayNews.length > 20 ) { %>
-      <li class="p-news__pagenation"><a href="/news/page-03.html">3</a></li>
+      <li class="p-news__pagenation">
+        <a href="/news/page-03.html" class="p-news__otherPageLink">3</a>
+      </li>
       <% } %>
     </ol>
   </section>
