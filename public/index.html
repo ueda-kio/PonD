@@ -6,34 +6,34 @@
 <!DOCTYPE html>
 <html lang="ja" data-scroll-disabled="false">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="トップのdescription">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="/assets/images/favicon.ico">
-
-<meta property="og:title" content="TOP">
-<meta property="og:description" content="トップのdescription">
-<meta property="og:url" content="">
-<meta property="og:image" content="">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TOP">
-<meta property="og:locale" content="ja_JP">
-
-<meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title" content="TOP">
-<meta name="twitter:url" content="">
-<meta name="twitter:description" content="トップのdescription">
-<meta name="twitter:image" content="">
+<meta charset="UTF-8" />
+<meta name="description" content="トップのdescription" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="/assets/images/favicon.ico" />
+<!--facebook用-->
+<meta property="og:title" content="TOP" />
+<meta property="og:description" content="トップのdescription" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" /><!--絶対パスで記述-->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="TOP" />
+<meta property="og:locale" content="ja_JP" />
+<!--twitter用-->
+<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
+<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
+<meta name="twitter:title" content="TOP" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:description" content="トップのdescription" />
+<meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-
+<script src="https://kit.fontawesome.com/1f3bba6d72.js" crossorigin="anonymous"></script>
 <title>TOP</title>
-<link href="assets/stylesheet/bundle.69a1e1a56b688482c449.css" rel="stylesheet"></head>
+<link href="assets/stylesheet/bundle.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrapper">
-
+<!-- .l-header -->
 <header class="p-header--home">
   <div class="p-header__top">
     <div class="p-header__logo">
@@ -42,22 +42,22 @@
     <nav>
       <ul class="p-header__nav">
         <li class="p-header__link">
-          <a href="/news">NEWS</a>
+          <a href="/news" >NEWS</a>
         </li>
         <li class="p-header__link">
-          <a href="/service">SERVICE</a>
+          <a href="/service" >SERVICE</a>
         </li>
         <li class="p-header__link">
-          <a href="/works">WORKS</a>
+          <a href="/works" >WORKS</a>
         </li>
         <li class="p-header__link">
-          <a href="/company">COMPANY</a>
+          <a href="/company" >COMPANY</a>
         </li>
         <li class="p-header__link">
-          <a href="/recruit">RECRUIT</a>
+          <a href="/recruit" >RECRUIT</a>
         </li>
         <li class="p-header__link">
-          <a href="/contact">CONTACT</a>
+          <a href="/contact" >CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -71,9 +71,8 @@
     <p class="p-header__caption--home">お客様の夢を叶える<wbr>Webサイトを制作</p>
     <div class="p-header__linkBtn">
       <div class="c-btn">
-        <a href="/contact">
+        <a href="/contact" class="c-btn__link">
           <span class="c-btn__txt">CONTACT</span>
-          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </div>
@@ -93,26 +92,26 @@
 <nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
     <li class="p-globalMenu__link">
-      <a href="/news" tabindex="2">NEWS</a>
+      <a href="/news"  tabindex="2">NEWS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/service" tabindex="2">SERVICE</a>
+      <a href="/service"  tabindex="2">SERVICE</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/works" tabindex="2">WORKS</a>
+      <a href="/works"  tabindex="2">WORKS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/company" tabindex="2">COMPANY</a>
+      <a href="/company"  tabindex="2">COMPANY</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/recruit" tabindex="2">RECRUIT</a>
+      <a href="/recruit"  tabindex="2">RECRUIT</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/contact" tabindex="2">CONTACT</a>
+      <a href="/contact"  tabindex="2">CONTACT</a>
     </li>
   </ul>
 </nav>
-
+<!-- .l-main -->
 <main>
   <div class="p-home">
     <section class="p-home__news">
@@ -283,9 +282,8 @@
         </li>
       </ul>
       <div class="c-btn">
-        <a href="/service">
+        <a href="/service" class="c-btn__link">
           <span class="c-btn__txt">MORE</span>
-          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </section>
@@ -307,10 +305,10 @@
         <div class="swiper-pagination p-home__swiperPagination"></div>
         <span class="p-home__swiperAutoBtn is-play" aria-label="Start automatic slide show">
           <button class="p-home__swiperAutoBtn--pause">
-            <i class="fas fa-pause-circle"></i>
+            <span>再生</span>
           </button>
           <button class="p-home__swiperAutoBtn--play">
-            <i class="fas fa-play-circle"></i>
+            <span>停止</span>
           </button>
         </span>
       </div>
@@ -324,9 +322,8 @@
           ご購入やお申込み数の増加などを実現します！
         </p>
         <div class="c-btn">
-          <a href="/works">
+          <a href="/works" class="c-btn__link">
             <span class="c-btn__txt">MORE</span>
-            <i class="fas fa-angle-right"></i>
           </a>
         </div>
       </div>
@@ -348,9 +345,8 @@
         夢を実現する手助けをさせてください。
       </p>
       <div class="c-btn">
-        <a href="/company">
+        <a href="/company" class="c-btn__link">
           <span class="c-btn__txt">MORE</span>
-          <i class="fas fa-angle-right"></i>
         </a>
       </div>
     </section>
@@ -368,15 +364,14 @@
         </h2>
         <p>私たちと一緒に働きませんか？</p>
         <div class="c-btn">
-          <a href="/recruit">
+          <a href="/recruit" class="c-btn__link">
             <span class="c-btn__txt">MORE</span>
-            <i class="fas fa-angle-right"></i>
           </a>
         </div>
       </div>
     </section>
   </div>
-
+<!-- l-footer -->
   <div class="l-main__contact">
     <h2 class="c-sectionTitle">
       <strong class="c-sectionTitle__main">CONTACT</strong>
@@ -384,9 +379,8 @@
     </h2>
     <p>Webサイトの制作のご依頼やお見積りなど、<br class="u-sp-only">お気軽にご相談ください。</p>
     <div class="c-btn">
-      <a href="/contact">
+      <a href="/contact" class="c-btn__link">
         <span class="c-btn__txt">MORE</span>
-        <i class="fas fa-angle-right"></i>
       </a>
     </div>
   </div>
@@ -395,12 +389,12 @@
   <div class="p-footer__logo">PON DESIGN</div>
   <nav>
     <ul class="p-footer__list">
-      <li class="p-footer__link"><a href="/news">NEWS</a></li>
-      <li class="p-footer__link"><a href="/service">SERVICE</a></li>
-      <li class="p-footer__link"><a href="/works">WORKS</a></li>
-      <li class="p-footer__link"><a href="/company">COMPANY</a></li>
-      <li class="p-footer__link"><a href="/recruit">RECRUIT</a></li>
-      <li class="p-footer__link"><a href="/contact">CONTACT</a></li>
+      <li class="p-footer__link"><a href="/news" >NEWS</a></li>
+      <li class="p-footer__link"><a href="/service" >SERVICE</a></li>
+      <li class="p-footer__link"><a href="/works" >WORKS</a></li>
+      <li class="p-footer__link"><a href="/company" >COMPANY</a></li>
+      <li class="p-footer__link"><a href="/recruit" >RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/contact" >CONTACT</a></li>
     </ul>
   </nav>
   <p class="p-footer__copylight">
@@ -408,5 +402,5 @@
   </p>
 </footer>
 </div>
-<script defer="defer" src="assets/javascript/bundle.da55ad0ccf16542f1073.js"></script></body>
+<script defer src="assets/javascript/bundle.js"></script></body>
 </html>

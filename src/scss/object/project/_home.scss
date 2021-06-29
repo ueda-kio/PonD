@@ -155,8 +155,7 @@
     @include var.mq('o-sp') {
       width: calc(60% - 20px);
       max-width: 750px;
-      margin: 0;
-      padding: 0;
+      margin: 0 0 -25px 0;
     }
   }
 
@@ -240,37 +239,59 @@
   &__swiperAutoBtn {
     position: absolute;
     bottom: 0%;
+    left: 5px;
     display: block;
-    width: 20px;
-    height: 20px;
-    padding: 0;
+    width: 23px;
+    height: 23px;
 
     &--pause,
     &--play {
+      overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;
       display: inline-block;
       visibility: hidden;
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
       background-color: inherit;
       z-index: 10;
       cursor: pointer;
 
-      & > svg {
-        width: 20px !important;
-        height: 20px;
-        color: #391e88;
-        transition: color .2s;
+      & > span {
+        position: absolute;
+        top: 100%;
+        bottom: 100%;
+        left: 100%;
+        right: 100%;
       }
+    }
+
+    &--pause::before,
+    &--play::before {
+      content: '\f28b';
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: #391e88;
+      transition: color .2s;
+    }
+
+    &--pause::before {
+      content: '\f28b';
+    }
+
+    &--play::before {
+      content: '\f144';
     }
 
     &--pause:hover,
     &--play:hover,
     &--pause:focus,
     &--play:focus {
-      & > svg {
+      &::before{
         color: #b79eff;
       }
     }

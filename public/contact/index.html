@@ -6,34 +6,34 @@
 <!DOCTYPE html>
 <html lang="ja" data-scroll-disabled="false">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="contactページのdescription">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="/assets/images/favicon.ico">
-
-<meta property="og:title" content="CONTACT">
-<meta property="og:description" content="contactページのdescription">
-<meta property="og:url" content="">
-<meta property="og:image" content="">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="CONTACT">
-<meta property="og:locale" content="ja_JP">
-
-<meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title" content="CONTACT">
-<meta name="twitter:url" content="">
-<meta name="twitter:description" content="contactページのdescription">
-<meta name="twitter:image" content="">
+<meta charset="UTF-8" />
+<meta name="description" content="contactページのdescription" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="/assets/images/favicon.ico" />
+<!--facebook用-->
+<meta property="og:title" content="CONTACT" />
+<meta property="og:description" content="contactページのdescription" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" /><!--絶対パスで記述-->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CONTACT" />
+<meta property="og:locale" content="ja_JP" />
+<!--twitter用-->
+<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
+<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
+<meta name="twitter:title" content="CONTACT" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:description" content="contactページのdescription" />
+<meta name="twitter:image" content="" /><!--絶対パスで記述-->
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
-
+<script src="https://kit.fontawesome.com/1f3bba6d72.js" crossorigin="anonymous"></script>
 <title>CONTACT</title>
-<link href="../assets/stylesheet/bundle.69a1e1a56b688482c449.css" rel="stylesheet"></head>
+<link href="../assets/stylesheet/bundle.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrapper">
-
+<!-- .l-header -->
 <header class="p-header">
   <div class="p-header__top">
     <div class="p-header__logo">
@@ -42,22 +42,22 @@
     <nav>
       <ul class="p-header__nav">
         <li class="p-header__link">
-          <a href="/news">NEWS</a>
+          <a href="/news" >NEWS</a>
         </li>
         <li class="p-header__link">
-          <a href="/service">SERVICE</a>
+          <a href="/service" >SERVICE</a>
         </li>
         <li class="p-header__link">
-          <a href="/works">WORKS</a>
+          <a href="/works" >WORKS</a>
         </li>
         <li class="p-header__link">
-          <a href="/company">COMPANY</a>
+          <a href="/company" >COMPANY</a>
         </li>
         <li class="p-header__link">
-          <a href="/recruit">RECRUIT</a>
+          <a href="/recruit" >RECRUIT</a>
         </li>
         <li class="p-header__link">
-          <a href="/contact" aria-current="page">CONTACT</a>
+          <a href="/contact" aria-current=page>CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -80,22 +80,22 @@
 <nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
     <li class="p-globalMenu__link">
-      <a href="/news">NEWS</a>
+      <a href="/news" >NEWS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/service">SERVICE</a>
+      <a href="/service" >SERVICE</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/works">WORKS</a>
+      <a href="/works" >WORKS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/company">COMPANY</a>
+      <a href="/company" >COMPANY</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/recruit">RECRUIT</a>
+      <a href="/recruit" >RECRUIT</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/contact" aria-current="page">CONTACT</a>
+      <a href="/contact" aria-current=page>CONTACT</a>
     </li>
   </ul>
 </nav>
@@ -169,7 +169,7 @@
           </h3>
           <div class="p-contact__selectWrap">
             <select name="adv" id="adv" class="p-contact__select" required>
-              <option value selected="selected" disabled="disabled">選択してください</option>
+              <option value selected disabled>選択してください</option>
               <option value="search">Google/Yahoo検索</option>
               <option value="sns">SNS</option>
               <option value="friends">友人や知人</option>
@@ -282,10 +282,9 @@
                 <span>個人情報の取り扱いについて同意のうえ送信します。</span>
               </label>
             </div>
-            <div class="c-btn">
-              <button href="/contact">
+            <div class="c-btn--doubleArrow">
+              <button href="/contact" class="c-btn__link">
                 <span class="c-btn__txt">送信する</span>
-                <i class="fas fa-angle-double-right"></i>
               </button>
             </div>
           </div>
@@ -298,12 +297,12 @@
   <div class="p-footer__logo">PON DESIGN</div>
   <nav>
     <ul class="p-footer__list">
-      <li class="p-footer__link"><a href="/news">NEWS</a></li>
-      <li class="p-footer__link"><a href="/service">SERVICE</a></li>
-      <li class="p-footer__link"><a href="/works">WORKS</a></li>
-      <li class="p-footer__link"><a href="/company">COMPANY</a></li>
-      <li class="p-footer__link"><a href="/recruit">RECRUIT</a></li>
-      <li class="p-footer__link"><a href="/contact" aria-current="page">CONTACT</a></li>
+      <li class="p-footer__link"><a href="/news" >NEWS</a></li>
+      <li class="p-footer__link"><a href="/service" >SERVICE</a></li>
+      <li class="p-footer__link"><a href="/works" >WORKS</a></li>
+      <li class="p-footer__link"><a href="/company" >COMPANY</a></li>
+      <li class="p-footer__link"><a href="/recruit" >RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/contact" aria-current=page>CONTACT</a></li>
     </ul>
   </nav>
   <p class="p-footer__copylight">
@@ -311,5 +310,5 @@
   </p>
 </footer>
 </div>
-<script defer="defer" src="../assets/javascript/bundle.da55ad0ccf16542f1073.js"></script></body>
+<script defer src="../assets/javascript/bundle.js"></script></body>
 </html>
