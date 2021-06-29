@@ -1,8 +1,11 @@
 import Swiper from 'swiper/bundle'
 
 export const swiper = () => {
+  const swiperElement = document.querySelector('.swiper-container');
 
-  const swiper = new Swiper('.swiper-container', {
+  if(!swiperElement) return false;
+
+  const swiper = new Swiper(swiperElement, {
     loop: true,
     effect: 'fade',
     speed: 500,
