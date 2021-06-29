@@ -25,6 +25,13 @@
     width: 220px;
   }
 
+  &--externalLInk {
+    @extend .c-btn;
+    &::after {
+      content: '\f35d';
+    }
+  }
+
   &:hover {
     &::after {
       right: 15px;
