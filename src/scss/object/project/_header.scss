@@ -177,9 +177,13 @@
       margin: 0;
     }
 
-    & > a {
+    & > .c-btn__link {
       background-image: none;
       border: solid 1px #fff;
+
+      &:hover {
+        box-shadow: 0 0 8px #eee;
+      }
     }
 
     &__txt {
@@ -203,8 +207,7 @@
       height: 1px;
       background-color: #fff;
       transform: translateY(-50%);
-      animation: extendBorder 1.5s cubic-bezier(1, 0, 0, 1) 0s infinite
-        backwards;
+      animation: extendBorder 1.5s cubic-bezier(1, 0, 0, 1) 0s infinite backwards;
     }
 
     @include var.mq('o-sp') {

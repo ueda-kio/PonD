@@ -37,7 +37,12 @@ $narrowLineHeight: 1.2;
 
 // mixin
 @mixin gradation($direction: right) {
-  background: linear-gradient(to $direction, #8649af 0%, #250d65 100%);
+  background-image: linear-gradient(to $direction, #7633a4 0%, #250d65 51%, #7633a4 100%);
+  @if $direction == right or $direction == left {
+    background-size: 200% auto;
+  } @else {
+    background-size: auto 200%;
+  }
 }
 
 @mixin hoverBorder {
