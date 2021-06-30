@@ -5,7 +5,83 @@
 
 <% include ./template/_head %>
 <!-- .l-header -->
-<% include ./template/_header_home %>
+<header class="p-header--home">
+  <div class="p-header__top">
+    <div class="p-header__logo">
+      <a href="/" tabindex="1">PON DESIGN</a>
+    </div>
+    <nav>
+      <ul class="p-header__nav">
+        <li class="p-header__link">
+          <a href="/news">NEWS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/service">SERVICE</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/works">WORKS</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/company">COMPANY</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/recruit" >RECRUIT</a>
+        </li>
+        <li class="p-header__link">
+          <a href="/contact" >CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="p-header__title--home">
+    <h1 class="p-header__mainTitle--home">
+      <strong>WEB</strong>
+      <strong>DESIGN</strong>
+      <strong>SPECIALIST</strong>
+    </h1>
+    <p class="p-header__caption--home">お客様の夢を叶える<wbr>Webサイトを制作</p>
+    <div class="p-header__linkBtn">
+      <div class="c-btn">
+        <a href="/contact" class="c-btn__link">
+          <span class="c-btn__txt">CONTACT</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="p-header__scrollNav">
+    <span>SCROLL</span>
+  </div>
+</header>
+<button class="p-hamburgerMenu js-menuTrigger" tabindex="1" aria-controls="global-menu-panel" aria-expanded="false">
+  <div class="c-hamburgerMenu">
+    <span class="c-hamburgerMenu__text">メニュー</span>
+  </div>
+  <span class="p-hamburgerMenu__txt">MENU</span>
+  <span class="p-hamburgerMenu__txt--open">OPEN</span>
+  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
+</button>
+<nav id="global-menu-panel" class="p-globalMenu" hidden>
+  <ul class="p-globalMenu__list">
+    <li class="p-globalMenu__link">
+      <a href="/news" tabindex="1">NEWS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/service" tabindex="1">SERVICE</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/works" tabindex="1">WORKS</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/company" tabindex="1">COMPANY</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/recruit" tabindex="1">RECRUIT</a>
+    </li>
+    <li class="p-globalMenu__link">
+      <a href="/contact" tabindex="1">CONTACT</a>
+    </li>
+  </ul>
+</nav>
 <!-- .l-main -->
 <main>
   <div class="p-home">
