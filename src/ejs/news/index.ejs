@@ -24,7 +24,7 @@
       <% for(let i = 0; i < 10; i++){ %>
       <% if(!arrayNews[i]) break; %>
         <li>
-          <a href="news/<%= arrayNews[i].href %>" class="p-news__link">
+          <a href="/news/<%= arrayNews[i].href %>" class="p-news__link">
             <p class="p-news__data">
               <time datetime="<%= arrayNews[i].dateTime %>"><%= arrayNews[i].date %></time>
               <span class="p-news__type"><%= arrayNews[i].type %></span>

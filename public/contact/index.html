@@ -6,34 +6,38 @@
 <!DOCTYPE html>
 <html lang="ja" data-scroll-disabled="false">
 <head>
-<meta charset="UTF-8" />
-<meta name="description" content="contactページのdescription" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="/assets/images/favicon.ico" />
-<!--facebook用-->
-<meta property="og:title" content="CONTACT" />
-<meta property="og:description" content="contactページのdescription" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="" /><!--絶対パスで記述-->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="CONTACT" />
-<meta property="og:locale" content="ja_JP" />
-<!--twitter用-->
-<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
-<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
-<meta name="twitter:title" content="CONTACT" />
-<meta name="twitter:url" content="" />
-<meta name="twitter:description" content="contactページのdescription" />
-<meta name="twitter:image" content="" /><!--絶対パスで記述-->
+<meta charset="UTF-8">
+<meta name="description" content="contactページのdescription">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/assets/images/favicon.ico">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+<meta property="og:title" content="CONTACT">
+<meta property="og:description" content="contactページのdescription">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CONTACT">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="CONTACT">
+<meta name="twitter:url" content="">
+<meta name="twitter:description" content="contactページのdescription">
+<meta name="twitter:image" content="">
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style">
+
+<link rel="preload" href="/assets/images/hero_page@2x-min.jpg" as="image">
+
+
 <script src="https://kit.fontawesome.com/1f3bba6d72.js" crossorigin="anonymous"></script>
 <title>CONTACT</title>
-<link href="../assets/stylesheet/bundle.css" rel="stylesheet"></head>
+<link href="../assets/stylesheet/bundle.a8886dd80731f9453e8b.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrapper">
-<!-- .l-header -->
+
 <header class="p-header">
   <div class="p-header__top">
     <div class="p-header__logo">
@@ -42,22 +46,22 @@
     <nav>
       <ul class="p-header__nav">
         <li class="p-header__link">
-          <a href="/news" >NEWS</a>
+          <a href="/news">NEWS</a>
         </li>
         <li class="p-header__link">
-          <a href="/service" >SERVICE</a>
+          <a href="/service">SERVICE</a>
         </li>
         <li class="p-header__link">
-          <a href="/works" >WORKS</a>
+          <a href="/works">WORKS</a>
         </li>
         <li class="p-header__link">
-          <a href="/company" >COMPANY</a>
+          <a href="/company">COMPANY</a>
         </li>
         <li class="p-header__link">
-          <a href="/recruit" >RECRUIT</a>
+          <a href="/recruit">RECRUIT</a>
         </li>
         <li class="p-header__link">
-          <a href="/contact" aria-current=page>CONTACT</a>
+          <a href="/contact" aria-current="page">CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -80,22 +84,22 @@
 <nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
     <li class="p-globalMenu__link">
-      <a href="/news" >NEWS</a>
+      <a href="/news">NEWS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/service" >SERVICE</a>
+      <a href="/service">SERVICE</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/works" >WORKS</a>
+      <a href="/works">WORKS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/company" >COMPANY</a>
+      <a href="/company">COMPANY</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/recruit" >RECRUIT</a>
+      <a href="/recruit">RECRUIT</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/contact" aria-current=page>CONTACT</a>
+      <a href="/contact" aria-current="page">CONTACT</a>
     </li>
   </ul>
 </nav>
@@ -111,9 +115,9 @@
     <form action="dummy">
       <div class="p-contact__formWrap">
         <div class="p-contact__entry">
-          <h3 class="p-contact__label--require">
+          <h2 class="p-contact__label--require">
             <label for="radio01"><span>お問い合わせ種別</span><strong>*必須</strong></label>
-          </h3>
+          </h2>
           <ul class="p-contact__checkboxes">
             <li class="p-contact__checkboxWrap">
               <input type="radio" name="type" value="radio01" id="radio01" class="p-contact__checkbox" required>
@@ -134,42 +138,42 @@
           </ul>
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label--require">
+          <h2 class="p-contact__label--require">
             <label for="name"><span>お名前</span><strong>*必須</strong></label>
-          </h3>
+          </h2>
           <input type="text" id="name" name="name" required>
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label">
+          <h2 class="p-contact__label">
             <label for="companyName"><span>会社名</span></label>
-          </h3>
+          </h2>
           <input type="text" id="companyName" name="companyName">
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label--require">
+          <h2 class="p-contact__label--require">
             <label for="email"><span>メールアドレス</span><strong>*必須</strong></label>
-          </h3>
+          </h2>
           <input type="email" id="email" name="email" required>
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label">
+          <h2 class="p-contact__label">
             <label for="tel"><span>お電話番号</span><small>（半角数字ハイフンなし）</small></label>
-          </h3>
+          </h2>
           <input type="tel" id="tel" name="tel">
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label--require">
+          <h2 class="p-contact__label--require">
             <label for="detail"><span>お問い合わせ内容</span><strong>*必須</strong></label>
-          </h3>
+          </h2>
           <textarea name="detail" id="detail" cols="30" rows="9" required></textarea>
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__label--require">
+          <h2 class="p-contact__label--require">
             <label for="adv"><span>PON DESIGNをどちらでお知りになりましたか？</span><strong>*必須</strong></label>
-          </h3>
+          </h2>
           <div class="p-contact__selectWrap">
             <select name="adv" id="adv" class="p-contact__select" required>
-              <option value selected disabled>選択してください</option>
+              <option value selected="selected" disabled="disabled">選択してください</option>
               <option value="search">Google/Yahoo検索</option>
               <option value="sns">SNS</option>
               <option value="friends">友人や知人</option>
@@ -179,7 +183,7 @@
           </div>
         </div>
         <div class="p-contact__entry">
-          <h3 class="p-contact__policyTitle">PRIVACY POLICY</h3>
+          <h2 class="p-contact__policyTitle">PRIVACY POLICY</h2>
           <div class="p-contact__policyWrap">
             <div class="p-contact__policy">
               <figure>
@@ -297,12 +301,12 @@
   <div class="p-footer__logo">PON DESIGN</div>
   <nav>
     <ul class="p-footer__list">
-      <li class="p-footer__link"><a href="/news" >NEWS</a></li>
-      <li class="p-footer__link"><a href="/service" >SERVICE</a></li>
-      <li class="p-footer__link"><a href="/works" >WORKS</a></li>
-      <li class="p-footer__link"><a href="/company" >COMPANY</a></li>
-      <li class="p-footer__link"><a href="/recruit" >RECRUIT</a></li>
-      <li class="p-footer__link"><a href="/contact" aria-current=page>CONTACT</a></li>
+      <li class="p-footer__link"><a href="/news">NEWS</a></li>
+      <li class="p-footer__link"><a href="/service">SERVICE</a></li>
+      <li class="p-footer__link"><a href="/works">WORKS</a></li>
+      <li class="p-footer__link"><a href="/company">COMPANY</a></li>
+      <li class="p-footer__link"><a href="/recruit">RECRUIT</a></li>
+      <li class="p-footer__link"><a href="/contact" aria-current="page">CONTACT</a></li>
     </ul>
   </nav>
   <p class="p-footer__copylight">
@@ -310,5 +314,5 @@
   </p>
 </footer>
 </div>
-<script defer src="../assets/javascript/bundle.js"></script></body>
+<script defer="defer" src="../assets/javascript/bundle.f8638e6ab18c150582db.js"></script></body>
 </html>
