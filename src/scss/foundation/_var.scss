@@ -36,6 +36,10 @@ $colorBorder: #b8aed5;
 $narrowLineHeight: 1.2;
 
 // mixin
+@mixin gradation($direction: right) {
+  background: linear-gradient(to $direction, #8649af 0%, #250d65 100%);
+}
+
 @mixin hoverBorder {
   & a {
     position: relative;

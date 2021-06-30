@@ -61,7 +61,7 @@
     height: 100%;
     padding: 0 35px;
     border-radius: 50px;
-    background-image: linear-gradient(to right, #7633a4 0%, #250d65 100%);
+    @include var.gradation;
     text-decoration: none;
     color: #fff;
     transition: box-shadow 0.3s, color .5s;

@@ -1,3 +1,5 @@
+@use "../../foundation/var";
+
 .c-sectionTitle {
   margin: 0 auto 30px auto;
   font-weight: bold;
@@ -5,7 +7,7 @@
 
   &__main {
     display: block;
-    background: linear-gradient(to right, #7633a4 30%, #250d65 70%);
+    @include var.gradation;
     background-clip: text;
     color: rgba($color: #7633a4, $alpha: 0);
     font-size: 30px;
