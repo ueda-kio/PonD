@@ -1,18 +1,19 @@
 .c-sectionTitle {
   margin: 0 auto 30px auto;
-  background: linear-gradient(to right, #7633a4 30%, #250d65 70%);
-  background-clip: text;
-  color: transparent;
   font-weight: bold;
   text-align: center;
 
   &__main {
     display: block;
+    background: linear-gradient(to right, #7633a4 30%, #250d65 70%);
+    background-clip: text;
+    color: rgba($color: #7633a4, $alpha: 0);
     font-size: 30px;
     font-weight: bold;
   }
 
   &__caption {
     font-size: 13px;
+    color: #391e88;
   }
 }
