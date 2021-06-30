@@ -1,12 +1,20 @@
 .c-shareBtn {
+  position: relative;
   display: inline-block;
-  height: 25px;
-  padding: 0 10px;
+  height: 30px;
+  padding: 0 10px 0 30px;
   border: none;
   border-radius: 4px;
   color: #fff;
   transition: box-shadow .2s;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
 
   &:hover {
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
@@ -15,27 +23,60 @@
   &--good {
     @extend .c-shareBtn;
     background-color: rgb(46, 119, 241);
+
+    &::before {
+      content: '\f164';
+      top: 45%;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
   }
 
   &--facebook {
     @extend .c-shareBtn;
     background-color: #3b5998;
+
+    &::before {
+      content: '\f09a';
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+    }
   }
 
   &--twitter {
     @extend .c-shareBtn;
     background-color: #1da1f2;
+
+    &::before {
+      content: '\f099';
+      font-family: "Font Awesome 5 Brands";
+      font-size: 1rem;
+      font-weight: 400;
+    }
   }
 
   &--line {
     @extend .c-shareBtn;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     padding: 0 5px;
     background-color: #06c755;
 
-    & > svg {
-      width: 1.5rem !important;
-      height: 1.5rem !important;
+    &::before {
+      content: '\f3c0';
+      left: 50%;
+      font-family: "Font Awesome 5 Brands";
+      font-size: 1.6rem;
+      font-weight: 400;
+      transform: translate(-50%, -50%);
+    }
+
+    & > span {
+      position: absolute;
+      top: 100%;
+      bottom: 100%;
+      left: 100%;
+      right: 100%;
     }
   }
 }

@@ -135,53 +135,65 @@
     display: flex;
     align-items: center;
     width: 50%;
-    padding: 32px 16px;
+    padding: 32px 15px 32px 0;
 
-    & > svg {
-      position: absolute;
-    }
-
-    &:first-child {
-      padding-left: 50px;
-
-      & > svg {
-        left: 15px;
-      }
-    }
     &:last-child {
-      padding-right: 50px;
-
-      & > svg {
-        right: 15px;
-      }
+      padding: 32px 0 32px 15px;
     }
 
     @include var.mq('o-sp') {
-      padding: 40px 31px;
+      padding: 40px 31px 40px 0;
 
-      &:first-child {
-        padding-left: 60px;
-
-        & > svg {
-          left: 25px;
-        }
-      }
       &:last-child {
-        padding-right: 60px;
-
-        & > svg {
-          right: 25px;
-        }
+        padding: 40px 0 40px 31px;
       }
     }
 
     & > a {
+      position: relative;
+      padding: 0 0 0 23px;
       text-decoration: none;
+
+      &::before {
+        content: '\f053';
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        transform: translateY(-50%);
+      }
 
       &:hover {
         text-decoration: underline;
       }
+
+      @include var.mq('o-sp') {
+        padding: 0 0 0 35px;
+
+        &::before {
+          left: 8px;
+        }
+      }
     }
+
+    &:last-child > a {
+        padding: 0 23px 0 0;
+
+        &::before {
+          content: '\f054';
+          left: auto;
+          right: 5px;
+        }
+
+        @include var.mq('o-sp') {
+          padding: 0 35px 0 0;
+
+          &::before {
+            right: 8px;
+          }
+        }
+      }
   }
 
   &__linkToOtherPage + &__linkToOtherPage {

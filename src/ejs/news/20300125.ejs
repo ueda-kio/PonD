@@ -28,7 +28,7 @@
     <span class="p-article__newsType"><%= arrayNews[pageNumber].type %></span>
   </p>
   <div class="p-article__hero">
-    <img src="<%= path %><%= arrayNews[pageNumber].photo.src %>" alt="<%= arrayNews[pageNumber].photo.alt %>">
+    <img src="<%= path %><%= arrayNews[pageNumber].photo.src %>" alt="<%= arrayNews[pageNumber].photo.alt %>" width="<%= arrayNews[pageNumber].photo.width %>" height="<%= arrayNews[pageNumber].photo.height %>">
   </div>
   <article class="p-article__wrap">
     <p>
@@ -48,19 +48,16 @@
   </article>
   <div class="p-article__pagerList">
     <button class="c-shareBtn--good">
-      <i class="fas fa-thumbs-up"></i>
-      <small>いいね！</small>
+      <span>いいね！</span>
     </button>
     <button class="c-shareBtn--facebook">
-      <i class="fab fa-facebook"></i>
-      <small>シェア</small>
+      <span>シェア</span>
     </button>
     <button class="c-shareBtn--twitter">
-      <i class="fab fa-twitter"></i>
-      <small>ツイート</small>
+      <span>ツイート</span>
     </button>
     <button class="c-shareBtn--line">
-      <i class="fab fa-line"></i>
+      <span>lineで送る</span>
     </button>
   </div>
   <nav class="p-article__pageNav">
