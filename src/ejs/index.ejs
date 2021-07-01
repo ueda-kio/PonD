@@ -90,18 +90,16 @@
         <strong class="c-sectionTitle__main">NEWS</strong>
         <span class="c-sectionTitle__caption">お知らせ</span>
       </h2>
-      <ul class="p-home__newsList">
-        <% arrayNews.forEach(el => { %>
-          <li>
-            <a href="/news/<%= el.href %>" class="p-home__newsLink">
-              <p class="p-home__newsData">
-                <time datetime="<%= el.dateTime %>"><%= el.date %></time>
-                <span class="p-home__newsType"><%= el.type %></span>
-              </p>
-              <p class="p-home__newsTitle"><%= el.title %></p>
-            </a>
-          </li>
-        <% }) %>
+      <ul class="p-home__newsList"><% arrayNews.forEach(el => { %>
+        <li>
+          <a href="/news/<%= el.href %>" class="p-home__newsLink">
+            <p class="p-home__newsData">
+              <time datetime="<%= el.dateTime %>"><%= el.date %></time>
+              <span class="p-home__newsType"><%= el.type %></span>
+            </p>
+            <p class="p-home__newsTitle"><%= el.title %></p>
+          </a>
+        </li><% }) %>
       </ul>
     </section>
     <section class="p-home__service">

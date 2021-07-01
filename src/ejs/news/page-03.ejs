@@ -20,19 +20,16 @@
     </ol>
   </div>
   <section class="p-news">
-    <ul class="p-news__list">
-      <% for(let i = 20; i < 30; i++){ %>
-      <% if(!arrayNews[i]) break; %>
-        <li>
-          <a href="news/<%= arrayNews[i].href %>" class="p-news__link">
-            <p class="p-news__data">
-              <time datetime="<%= arrayNews[i].dateTime %>"><%= arrayNews[i].date %></time>
-              <span class="p-news__type"><%= arrayNews[i].type %></span>
-            </p>
-            <p class="p-news__title"><%= arrayNews[i].title %></p>
-          </a>
-        </li>
-      <% } %>
+    <ul class="p-news__list"><% for(let i = 20; i < 30; i++){ if(!arrayNews[i]) break; %>
+      <li>
+        <a href="news/<%= arrayNews[i].href %>" class="p-news__link">
+          <p class="p-news__data">
+            <time datetime="<%= arrayNews[i].dateTime %>"><%= arrayNews[i].date %></time>
+            <span class="p-news__type"><%= arrayNews[i].type %></span>
+          </p>
+          <p class="p-news__title"><%= arrayNews[i].title %></p>
+        </a>
+      </li><% } %>
     </ul>
     <ol class="p-news__nav">
       <li class="p-news__pagenation">
