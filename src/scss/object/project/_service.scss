@@ -37,12 +37,12 @@
   &__title {
     margin: 0 0 15px;
     text-align: center;
-    font-size: 18px;
+    @include var.fontSize(18);
     font-weight: bold;
 
     @include var.mq('o-sp') {
       margin: 0 0 20px;
-      font-size: 24px;
+      @include var.fontSize(24);
     }
   }
 }

@@ -68,7 +68,7 @@
   }
 
   &__txt {
-    font-size: 14px;
+    @include var.fontSize(14);
     font-weight: bold;
     word-break: break-all;
     z-index: 10;

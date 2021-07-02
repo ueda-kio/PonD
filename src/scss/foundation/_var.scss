@@ -36,6 +36,11 @@ $colorBorder: #b8aed5;
 $narrowLineHeight: 1.2;
 
 // mixin
+@mixin fontSize($size) {
+  font-size: #{$size}px;
+  font-size: #{$size / 10}rem;
+}
+
 @mixin gradation($direction: right) {
   background-image: linear-gradient(to $direction, #7633a4 0%, #250d65 51%, #7633a4 100%);
   @if $direction == right or $direction == left {

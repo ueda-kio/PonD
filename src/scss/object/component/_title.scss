@@ -7,9 +7,9 @@
   color: transparent;
   font-weight: bold;
   text-align: center;
-  font-size: 24px;
+  @include var.fontSize(24);
 
   @include var.mq('o-sp') {
-    font-size: 32px;
+    @include var.fontSize(32);
   }
 }

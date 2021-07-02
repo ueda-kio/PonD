@@ -57,14 +57,14 @@
     margin-left: 15px;
     border-radius: 50px;
     background-color: #e8e8e8;
-    font-size: 11px;
+    @include var.fontSize(11);
     font-weight: bold;
     text-align: center;
     line-height: 19px;
 
     @include var.mq('o-sp') {
       margin-left: 17px;
-      font-size: 12px;
+      @include var.fontSize(12);
     }
   }
 
@@ -273,7 +273,7 @@
       display: inline-block;
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
-      font-size: 1.4rem;
+      @include var.fontSize(20);
       color: #391e88;
       transition: color .2s;
     }
@@ -335,7 +335,7 @@
 
   &__companyTitle {
     margin-bottom: 40px;
-    font-size: 32px;
+    @include var.fontSize(32);
     font-weight: bold;
     text-decoration: solid underline 8px #f5f534;
     white-space: nowrap;

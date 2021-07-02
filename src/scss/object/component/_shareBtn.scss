@@ -1,3 +1,5 @@
+@use "../../foundation/var";
+
 .c-shareBtn {
   position: relative;
   display: inline-block;
@@ -26,7 +28,6 @@
 
     &::before {
       content: '\f164';
-      top: 45%;
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
     }
@@ -39,6 +40,7 @@
     &::before {
       content: '\f09a';
       font-family: "Font Awesome 5 Brands";
+      @include var.fontSize(15);
       font-weight: 400;
     }
   }
@@ -50,7 +52,7 @@
     &::before {
       content: '\f099';
       font-family: "Font Awesome 5 Brands";
-      font-size: 1rem;
+      @include var.fontSize(15);
       font-weight: 400;
     }
   }
@@ -66,7 +68,7 @@
       content: '\f3c0';
       left: 50%;
       font-family: "Font Awesome 5 Brands";
-      font-size: 1.6rem;
+      @include var.fontSize(25);
       font-weight: 400;
       transform: translate(-50%, -50%);
     }

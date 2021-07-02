@@ -27,7 +27,7 @@
     display: block;
     margin-top: -3px;
     color: #fff;
-    font-size: 10px;
+    @include var.fontSize(10);
     font-weight: bold;
     transform: translateX(-50%);
     transition: visibility .2s, opacity .2s;

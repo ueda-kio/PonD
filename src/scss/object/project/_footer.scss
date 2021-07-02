@@ -10,7 +10,7 @@
   }
 
   &__logo {
-    font-size: 18px;
+    @include var.fontSize(18);
     font-weight: bold;
     border-bottom: solid 1px #fff;
 
@@ -59,7 +59,7 @@
     }
 
     & > small {
-      font-size: 10px;
+      @include var.fontSize(10);
       color: var.$colorPurple;
     }
   }

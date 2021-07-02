@@ -8,11 +8,11 @@
   }
 
   &__lead {
-    font-size: 16px;
+    @include var.fontSize(16);
     text-align: center;
 
     @include var.mq('u-sp') {
-      font-size: 14px;
+      @include var.fontSize(14);
     }
   }
 
@@ -33,7 +33,7 @@
     font-weight: bold;
 
     & small {
-      font-size: 12px;
+      @include var.fontSize(12);
       font-weight: normal;
     }
 
@@ -46,7 +46,7 @@
       @extend .p-contact__label;
 
       & strong {
-        font-size: 12px;
+        @include var.fontSize(12);
         color: #391e88;
       }
     }

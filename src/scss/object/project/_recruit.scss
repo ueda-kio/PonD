@@ -15,23 +15,23 @@
 
   &__head .c-sectionTitle {
     &__main {
-      font-size: 48px;
+      @include var.fontSize(48);
       line-height: var.$narrowLineHeight;
     }
 
     &__caption {
       display: inline-block;
       margin-top: 10px;
-      font-size: 18px;
+      @include var.fontSize(18);
     }
 
     @include var.mq('o-sp') {
       &__main {
-        font-size: 72px;
+        @include var.fontSize(72);
       }
 
       &__caption {
-        font-size: 32px;
+        @include var.fontSize(32);
       }
     }
   }
@@ -59,14 +59,14 @@
     border-radius: 10px;
 
     & .c-title {
-      font-size: 18px;
+      @include var.fontSize(18);
     }
 
     @include var.mq('o-sp') {
       padding: 60px 20px;
 
       & .c-title {
-        font-size: 24px;
+        @include var.fontSize(24);
       }
     }
 
@@ -93,7 +93,7 @@
   &__linkCaption {
     display: block;
     margin-top: 10px;
-    font-size: 12px;
+    @include var.fontSize(12);
     text-align: center;
   }
 

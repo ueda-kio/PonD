@@ -10,12 +10,12 @@
     @include var.gradation;
     background-clip: text;
     color: rgba($color: #7633a4, $alpha: 0);
-    font-size: 30px;
+    @include var.fontSize(30);
     font-weight: bold;
   }
 
   &__caption {
-    font-size: 13px;
+    @include var.fontSize(13);
     color: #391e88;
   }
 }

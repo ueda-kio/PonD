@@ -9,7 +9,7 @@
   height: 100vh;
   @include var.gradation(bottom);
   color: #fff;
-  font-size: 15px;
+  @include var.fontSize(15);
   font-weight: bold;
   opacity: 0;
   transition: opacity .3s, visibility .3s;
