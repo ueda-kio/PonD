@@ -1,11 +1,10 @@
 {
-  "name": "webpack5_dart",
+  "name": "pon-d",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "^16.0.0",
-    "npm": "⚠️ please_use_yarn_instead!"
+    "node": "^16.0.0"
   },
   "scripts": {
     "start": "webpack serve --mode=development",
