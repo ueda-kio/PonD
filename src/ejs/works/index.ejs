@@ -6,7 +6,7 @@
     caption: '制作実績'
   }
 %>
-<% const path = '/assets/images/'; %>
+<% const path = '../assets/images/'; %>
 
 <% include ../template/_head %>
 <!-- .l-header -->
@@ -14,14 +14,14 @@
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
-      <li><a href="/">HOME</a></li>
+      <li><a href="<%= githubPath %>">HOME</a></li>
       <li><%= title %></li>
     </ol>
   </div>
   <section class="p-works">
     <ul class="p-works__list">
       <li>
-        <a href="/" target="_blank" class="p-works__link">
+        <a href="<%= githubPath %>" target="_blank" class="p-works__link">
           <div class="p-works__img">
             <img src="<%= path %>smoothiesta@2x-min.jpg" alt="" width="1500" height="1020">
           </div>
@@ -29,7 +29,7 @@
         </a>
       </li>
       <li>
-        <a href="/" target="_blank" class="p-works__link">
+        <a href="<%= githubPath %>" target="_blank" class="p-works__link">
           <div class="p-works__img">
             <img src="<%= path %>web-conference01-min.jpeg" alt="" width="750" height="510">
           </div>
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li>
-        <a href="/" target="_blank" class="p-works__link">
+        <a href="<%= githubPath %>" target="_blank" class="p-works__link">
           <div class="p-works__img">
             <img src="<%= path %>lamina01-min.jpeg" alt="" width="750" height="510">
           </div>
@@ -45,7 +45,7 @@
         </a>
       </li>
       <li>
-        <a href="/" target="_blank" class="p-works__link">
+        <a href="<%= githubPath %>" target="_blank" class="p-works__link">
           <div class="p-works__img">
             <img src="<%= path %>citylab-min.jpeg" alt="" width="750" height="510">
           </div>
@@ -53,7 +53,7 @@
         </a>
       </li>
       <li>
-        <a href="/" target="_blank" class="p-works__link">
+        <a href="<%= githubPath %>" target="_blank" class="p-works__link">
           <div class="p-works__img">
             <img src="<%= path %>tabilog-min.jpeg" alt="" width="750" height="510">
           </div>

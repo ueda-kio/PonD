@@ -1,6 +1,6 @@
 <% const title = "TOP"; const description = "トップのdescription"; %>
 <% const page = 'home' %>
-<% const path = '/assets/images/'; %>
+<% const path = 'assets/images/'; %>
 <% include ./template/_arrayNews %>
 
 <% include ./template/_head %>
@@ -8,27 +8,27 @@
 <header class="p-header--home">
   <div class="p-header__top">
     <div class="p-header__logo">
-      <a href="/" tabindex="1">PON DESIGN</a>
+      <a href="<%= githubPath %>" tabindex="1">PON DESIGN</a>
     </div>
     <nav>
       <ul class="p-header__nav">
         <li class="p-header__link">
-          <a href="/news">NEWS</a>
+          <a href="<%= githubPath %>news/">NEWS</a>
         </li>
         <li class="p-header__link">
-          <a href="/service">SERVICE</a>
+          <a href="<%= githubPath %>service/">SERVICE</a>
         </li>
         <li class="p-header__link">
-          <a href="/works">WORKS</a>
+          <a href="<%= githubPath %>works">WORKS</a>
         </li>
         <li class="p-header__link">
-          <a href="/company">COMPANY</a>
+          <a href="<%= githubPath %>company">COMPANY</a>
         </li>
         <li class="p-header__link">
-          <a href="/recruit" >RECRUIT</a>
+          <a href="<%= githubPath %>recruit" >RECRUIT</a>
         </li>
         <li class="p-header__link">
-          <a href="/contact" >CONTACT</a>
+          <a href="<%= githubPath %>contact" >CONTACT</a>
         </li>
       </ul>
     </nav>
@@ -42,7 +42,7 @@
     <p class="p-header__caption--home">お客様の夢を叶える<wbr>Webサイトを制作</p>
     <div class="p-header__linkBtn">
       <div class="c-btn">
-        <a href="/contact" class="c-btn__link">
+        <a href="<%= githubPath %>contact" class="c-btn__link">
           <span class="c-btn__txt">CONTACT</span>
         </a>
       </div>
@@ -63,22 +63,22 @@
 <nav id="global-menu-panel" class="p-globalMenu" hidden>
   <ul class="p-globalMenu__list">
     <li class="p-globalMenu__link">
-      <a href="/news" tabindex="1">NEWS</a>
+      <a href="<%= githubPath %>news" tabindex="1">NEWS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/service" tabindex="1">SERVICE</a>
+      <a href="<%= githubPath %>service" tabindex="1">SERVICE</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/works" tabindex="1">WORKS</a>
+      <a href="<%= githubPath %>works" tabindex="1">WORKS</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/company" tabindex="1">COMPANY</a>
+      <a href="<%= githubPath %>company" tabindex="1">COMPANY</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/recruit" tabindex="1">RECRUIT</a>
+      <a href="<%= githubPath %>recruit" tabindex="1">RECRUIT</a>
     </li>
     <li class="p-globalMenu__link">
-      <a href="/contact" tabindex="1">CONTACT</a>
+      <a href="<%= githubPath %>contact" tabindex="1">CONTACT</a>
     </li>
   </ul>
 </nav>
@@ -92,7 +92,7 @@
       </h2>
       <ul class="p-home__newsList"><% arrayNews.forEach(el => { %>
         <li>
-          <a href="/news/<%= el.href %>" class="p-home__newsLink">
+          <a href="<%= githubPath %>news/<%= el.href %>" class="p-home__newsLink">
             <p class="p-home__newsData">
               <time datetime="<%= el.dateTime %>"><%= el.date %></time>
               <span class="p-home__newsType"><%= el.type %></span>
@@ -131,7 +131,7 @@
         </li>
       </ul>
       <div class="c-btn">
-        <a href="/service" class="c-btn__link">
+        <a href="<%= githubPath %>service" class="c-btn__link">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
@@ -171,7 +171,7 @@
           ご購入やお申込み数の増加などを実現します！
         </p>
         <div class="c-btn">
-          <a href="/works" class="c-btn__link">
+          <a href="<%= githubPath %>works" class="c-btn__link">
             <span class="c-btn__txt">MORE</span>
           </a>
         </div>
@@ -194,7 +194,7 @@
         夢を実現する手助けをさせてください。
       </p>
       <div class="c-btn">
-        <a href="/company" class="c-btn__link">
+        <a href="<%= githubPath %>company" class="c-btn__link">
           <span class="c-btn__txt">MORE</span>
         </a>
       </div>
@@ -213,7 +213,7 @@
         </h2>
         <p>私たちと一緒に働きませんか？</p>
         <div class="c-btn">
-          <a href="/recruit" class="c-btn__link">
+          <a href="<%= githubPath %>recruit" class="c-btn__link">
             <span class="c-btn__txt">MORE</span>
           </a>
         </div>

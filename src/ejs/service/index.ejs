@@ -6,7 +6,7 @@
     caption: '事業内容'
   }
 %>
-<% const path = '/assets/images/'; %>
+<% const path = '../assets/images/'; %>
 
 <% include ../template/_head %>
 <!-- .l-header -->
@@ -14,7 +14,7 @@
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
-      <li><a href="/">HOME</a></li>
+      <li><a href="<%= githubPath %>">HOME</a></li>
       <li><%= title %></li>
     </ol>
   </div>

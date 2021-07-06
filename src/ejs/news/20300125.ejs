@@ -8,7 +8,7 @@
 %>
 <% include ../template/_arrayNews %>
 <% const pageNumber = 2; %>
-<% const path = '/assets/images/'; %>
+<% const path = '../assets/images/'; %>
 
 <% include ../template/_head %>
 <!-- .l-header -->
@@ -16,8 +16,8 @@
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
-      <li><a href="/">HOME</a></li>
-      <li><a href="/news">NEWS</a></li>
+      <li><a href="<%= githubPath %>">HOME</a></li>
+      <li><a href="<%= githubPath %>news">NEWS</a></li>
       <li><%= arrayNews[pageNumber].title %></li>
     </ol>
   </div>
@@ -66,16 +66,16 @@
         <% if(pageNumber === 0) { %>
         <% } else { %>
         <i class="fas fa-chevron-left"></i>
-        <a href="<%= arrayNews[pageNumber - 1].href %>"><%= arrayNews[pageNumber - 1].title %></a>
+        <a href="<%= githubPath %><%= arrayNews[pageNumber - 1].href %>"><%= arrayNews[pageNumber - 1].title %></a>
         <% } %>
       </li>
       <li class="p-article__linkToOtherPage">
-        <a href="<%= arrayNews[pageNumber + 1].href %>"><%= arrayNews[pageNumber + 1].title %></a>
+        <a href="<%= githubPath %><%= arrayNews[pageNumber + 1].href %>"><%= arrayNews[pageNumber + 1].title %></a>
         <i class="fas fa-chevron-right"></i>
       </li>
     </ol>
     <p class="p-article__toHome">
-      <a href="/news">NEWS一覧</a>
+      <a href="<%= githubPath %>news">NEWS一覧</a>
     </p>
   </nav>
 </section>

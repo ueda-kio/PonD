@@ -6,7 +6,7 @@
     caption: '採用情報'
   }
 %>
-<% const path = '/assets/images/'; %>
+<% const path = '../assets/images/'; %>
 
 <% include ../template/_head %>
 <!-- .l-header -->
@@ -14,7 +14,7 @@
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
-      <li><a href="/">HOME</a></li>
+      <li><a href="<%= githubPath %>">HOME</a></li>
       <li><%= title %></li>
     </ol>
   </div>
@@ -72,7 +72,7 @@
           </div>
         </dl>
         <div class="c-btn--externalLInk">
-          <a href="/contact" class="c-btn__link">
+          <a href="<%= githubPath %>contact" class="c-btn__link">
             <span class="c-btn__txt">MORE</span>
           </a>
         </div>

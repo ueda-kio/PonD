@@ -6,7 +6,7 @@
     caption: 'お問い合わせ'
   }
 %>
-<% const path = '/assets/images/'; %>
+<% const path = '../assets/images/'; %>
 
 <% include ../template/_head %>
 <!-- .l-header -->
@@ -14,7 +14,7 @@
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
-      <li><a href="/">HOME</a></li>
+      <li><a href="<%= githubPath %>">HOME</a></li>
       <li><%= title %></li>
     </ol>
   </div>
@@ -195,7 +195,7 @@
               </label>
             </div>
             <div class="c-btn--doubleArrow">
-              <button href="/contact" class="c-btn__link">
+              <button href="<%= githubPath %>contact" class="c-btn__link">
                 <span class="c-btn__txt">送信する</span>
               </button>
             </div>
