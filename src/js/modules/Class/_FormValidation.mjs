@@ -1,3 +1,5 @@
+import { submitContact } from "../_submitContact.mjs";
+
 export class Validation {
   constructor(form) {
     this.form = form;
@@ -227,6 +229,7 @@ export class Validation {
         }
 
         console.log('OK!');
+        submitContact(this.form);
       });
     }
 
