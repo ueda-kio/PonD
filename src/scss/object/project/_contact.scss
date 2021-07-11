@@ -42,12 +42,16 @@
       margin-left: 5px;
     }
 
-    &--require {
+    &--required {
       @extend .p-contact__label;
 
       & strong {
         @include var.fontSize(12);
         color: #391e88;
+      }
+
+      & > label.is-error > * {
+        color: #ef492e;
       }
     }
   }
@@ -121,6 +125,15 @@
     &:checked + .p-contact__radiolabel::after {
       opacity: 1;
     }
+
+    &.is-error + .p-contact__radiolabel {
+      color: #ef492e;
+
+      &::before {
+        border: 2px solid #ef492e;
+        background-color: #ffece9;
+      }
+    }
   }
 
   &__entry {
@@ -132,28 +145,35 @@
         margin-top: 45px;
       }
     }
+  }
 
-    & > input[type="text"],
-    & > input[type="tel"],
-    & > input[type="email"],
-    & > textarea {
-      width: 100%;
-      margin-top: 10px;
-      padding: 12px;
-      border: solid 1px #aaa;
-      border-radius: 6px;
-      background-color: #fff;
-      transition: box-shadow .2s;
+  &__textFied {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: solid 1px #aaa;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: box-shadow .2s;
 
-      &:hover {
-        box-shadow: 0 0 5px rgb(0 153 255 / 70%);
-      }
-
-      &:focus {
-        border: solid 2px #09f;
-        box-shadow: 0 0 5px rgb(0 153 255 / 50%);
-      }
+    &:hover {
+      box-shadow: 0 0 5px rgb(0 153 255 / 70%);
     }
+
+    &:focus {
+      border: solid 2px #09f;
+      box-shadow: 0 0 5px rgb(0 153 255 / 50%);
+    }
+
+    &.is-error {
+      border: 2px solid #ef492e;
+      background-color: #ffece9;
+    }
+  }
+
+  &__errorMessage {
+    margin-top: 10px;
+    color: #ef492e;
   }
 
   &__policyWrap {
@@ -214,6 +234,15 @@
       opacity: 0;
       transform: rotate(-45deg) translate(30%, -65%);
     }
+
+    &.is-error {
+      color: #ef492e;
+
+      &::before {
+        border: 2px solid #ef492e;
+        background-color: #ffece9;
+      }
+    }
   }
 
   &__agreement {
@@ -269,6 +298,11 @@
     background-color: #fff;
     transition: box-shadow .2s;
     cursor: pointer;
+
+    &.is-error {
+      border: 2px solid #ef492e;
+      background-color: #ffece9;
+    }
 
     &:hover {
       box-shadow: 0 0 5px rgb(0 153 255 / 70%);
