@@ -1,3 +1,5 @@
+import { htmlspecialchars } from "./_htmlspecialchars.mjs";
+
 export const submitContact = (_form) => {
   const form = _form;
   let type = '';
@@ -30,16 +32,16 @@ export const submitContact = (_form) => {
           break;
         }
         case(input.name === 'name'):
-          name = input.value;
+          name = htmlspecialchars(input.value);
           break;
         case(input.name === 'companyName'):
-          companyName = input.value;
+          companyName = htmlspecialchars(input.value);
           break;
         case(input.name === 'email'):
-          email = input.value;
+          email = htmlspecialchars(input.value);
           break;
         case(input.name === 'detail'):
-          detail = input.value;
+          detail = htmlspecialchars(input.value);
           break;
         case(input.name === 'adv'):
           switch(true) {

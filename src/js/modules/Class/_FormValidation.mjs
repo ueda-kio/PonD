@@ -228,7 +228,6 @@ export class Validation {
           }
         }
 
-        console.log('OK!');
         submitContact(this.form);
       });
     }
