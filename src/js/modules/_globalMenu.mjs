@@ -1,4 +1,4 @@
-import { setScrollStop, removeScrollStop } from "./_scroll-stop.mjs";
+import { toggleScrollStop } from "./_scroll-stop.mjs";
 
 export const GlobalMenu = () => {
   const html = document.documentElement;
@@ -12,17 +12,14 @@ export const GlobalMenu = () => {
     const globalMenu = document.querySelector('.p-globalMenu');
 
     globalMenu.classList.toggle('is-open');
+    toggleScrollStop()
 
     if(html.getAttribute('data-scroll-disabled') !== 'true') {
-      html.setAttribute('data-scroll-disabled', 'true');
-      trigger.setAttribute('aria-expanded', 'true');
-      globalMenu.hidden = false;
-      setScrollStop();
-    }else {
-      html.setAttribute('data-scroll-disabled', 'false');
       trigger.setAttribute('aria-expanded', 'false');
       globalMenu.hidden = true;
-      removeScrollStop();
+    } else {
+      trigger.setAttribute('aria-expanded', 'true');
+      globalMenu.hidden = false;
     }
   };
 
@@ -39,6 +36,18 @@ export const GlobalMenu = () => {
       }
       toggleMenu(e);
     });
+
+    document.querySelectorAll('.p-globalMenu__link').forEach((link) => {
+      link.addEventListener('keydown', (e) => {
+        if(
+          e.key === ' ' ||
+          e.key === 'Space'
+        ) {
+          e.preventDefault();
+          location.href = `${link.children[0].href}`;
+        }
+      })
+    })
   };
 
   addEvents();
