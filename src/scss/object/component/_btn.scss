@@ -28,6 +28,20 @@
     }
   }
 
+  &--close {
+    @extend .c-btn;
+
+    & > .c-btn__link {
+      &::after {
+        content: '\f057';
+      }
+
+      &:hover::after {
+        right: 20px;
+      }
+    }
+  }
+
   &__link {
     position: relative;
     display: flex;
@@ -63,6 +77,21 @@
 
       &::after {
         right: 15px;
+      }
+    }
+
+    &:disabled {
+      background-image: none;
+      background-color: #757575;
+      cursor: initial;
+
+      &:hover {
+        border: none;
+        box-shadow: none;
+
+        &::after {
+          right: 20px;
+        }
       }
     }
   }

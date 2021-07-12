@@ -87,7 +87,7 @@ export const submitContact = (_form) => {
       body: JSON.stringify(payload)
     })
     .then(() => {
-      alert('送信が完了しました。追ってご連絡いたします！');
+      document.getElementById('submit').disabled = true;
     })
   }
 
