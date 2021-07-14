@@ -5,7 +5,7 @@
 
 
 <!DOCTYPE html>
-<html lang="ja" data-scroll-disabled="false">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="contactページのdescription">
@@ -35,7 +35,7 @@
 
 <script src="https://kit.fontawesome.com/1f3bba6d72.js" crossorigin="anonymous"></script>
 <title>CONTACT</title>
-<link href="../assets/stylesheet/bundle.386846214da98bd1c7df.css" rel="stylesheet"></head>
+<link href="../assets/stylesheet/bundle.99835b298bd7ad399736.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrapper">
 
@@ -74,36 +74,38 @@
     <p class="p-header__caption">お問い合わせ</p>
   </div>
 </header>
-<button class="p-hamburgerMenu js-menuTrigger" aria-controls="global-menu-panel" aria-expanded="false">
-  <div class="c-hamburgerMenu">
-    <span class="c-hamburgerMenu__text">メニュー</span>
-  </div>
-  <span class="p-hamburgerMenu__txt">MENU</span>
-  <span class="p-hamburgerMenu__txt--open">OPEN</span>
-  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
-</button>
-<nav id="global-menu-panel" class="p-globalMenu" hidden>
-  <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link">
-      <a href="/PonD/news/">NEWS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="/PonD/service/">SERVICE</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="/PonD/works/">WORKS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="/PonD/company/">COMPANY</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="/PonD/recruit/">RECRUIT</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="/PonD/contact/" aria-current="page">CONTACT</a>
-    </li>
-  </ul>
-</nav>
+<div class="js-focus-loop">
+  <button class="p-hamburgerMenu js-menuTrigger" aria-controls="global-menu-panel" aria-expanded="false">
+    <div class="c-hamburgerMenu">
+      <span class="c-hamburgerMenu__text">メニュー</span>
+    </div>
+    <span class="p-hamburgerMenu__txt">MENU</span>
+    <span class="p-hamburgerMenu__txt--open">OPEN</span>
+    <span class="p-hamburgerMenu__txt--close">CLOSE</span>
+  </button>
+  <nav id="global-menu-panel" class="p-globalMenu" hidden>
+    <ul class="p-globalMenu__list">
+      <li class="p-globalMenu__link">
+        <a href="/PonD/news/">NEWS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="/PonD/service/">SERVICE</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="/PonD/works/">WORKS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="/PonD/company/">COMPANY</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="/PonD/recruit/">RECRUIT</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="/PonD/contact/" aria-current="page">CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <main class="l-main">
   <div class="l-main__heading">
     <ol class="l-main__breadcrumb">
@@ -113,63 +115,68 @@
   </div>
   <section class="p-contact">
     <p class="p-contact__lead">Webサイトの制作のご依頼やお見積りなど、<br>お気軽にご相談ください。</p>
-    <form action="dummy">
+    <form action="dummy" method="POST" class="js-form-validate">
       <div class="p-contact__formWrap">
         <div class="p-contact__entry">
-          <h2 class="p-contact__label--require">
+          <h2 class="p-contact__label--required">
             <label for="radio01"><span>お問い合わせ種別</span><strong>*必須</strong></label>
           </h2>
           <ul class="p-contact__checkboxes">
             <li class="p-contact__checkboxWrap">
-              <input type="radio" name="type" value="radio01" id="radio01" class="p-contact__checkbox" required>
+              <input type="radio" name="type" value="radio01" id="radio01" data-radio-group-error="radio-error" class="p-contact__checkbox" required>
               <label for="radio01" class="p-contact__radiolabel"><span>お仕事のご依頼・ご相談</span></label>
             </li>
             <li class="p-contact__checkboxWrap">
-              <input type="radio" name="type" value="radio02" id="radio02" class="p-contact__checkbox" required>
+              <input type="radio" name="type" value="radio02" id="radio02" data-radio-group-error="radio-error" class="p-contact__checkbox" required>
               <label for="radio02" class="p-contact__radiolabel"><span>お見積りのご依頼</span></label>
             </li>
             <li class="p-contact__checkboxWrap">
-              <input type="radio" name="type" value="radio03" id="radio03" class="p-contact__checkbox" required>
+              <input type="radio" name="type" value="radio03" id="radio03" data-radio-group-error="radio-error" class="p-contact__checkbox" required>
               <label for="radio03" class="p-contact__radiolabel"><span>採用について</span></label>
             </li>
             <li class="p-contact__checkboxWrap">
-              <input type="radio" name="type" value="radio04" id="radio04" class="p-contact__checkbox" required>
+              <input type="radio" name="type" value="radio04" id="radio04" data-radio-group-error="radio-error" class="p-contact__checkbox" required>
               <label for="radio04" class="p-contact__radiolabel"><span>その他</span></label>
             </li>
           </ul>
+          <p id="radio-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
-          <h2 class="p-contact__label--require">
+          <h2 class="p-contact__label--required">
             <label for="name"><span>お名前</span><strong>*必須</strong></label>
           </h2>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" title="氏名を入力してください" class="p-contact__textFied" required>
+          <p id="name-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
           <h2 class="p-contact__label">
             <label for="companyName"><span>会社名</span></label>
           </h2>
-          <input type="text" id="companyName" name="companyName">
+          <input type="text" id="companyName" name="companyName" title="会社名を入力してください" class="p-contact__textFied">
         </div>
         <div class="p-contact__entry">
-          <h2 class="p-contact__label--require">
+          <h2 class="p-contact__label--required">
             <label for="email"><span>メールアドレス</span><strong>*必須</strong></label>
           </h2>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="メールアドレス形式で入力してください" class="p-contact__textFied" required>
+          <p id="email-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
           <h2 class="p-contact__label">
             <label for="tel"><span>お電話番号</span><small>（半角数字ハイフンなし）</small></label>
           </h2>
-          <input type="tel" id="tel" name="tel">
+          <input type="tel" id="tel" name="tel" pattern="\d{2,4}-?\d{2,4}-?\d{3,4}" title="お電話番号をハイフンなしで入力してください" class="p-contact__textFied">
+          <p id="tel-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
-          <h2 class="p-contact__label--require">
+          <h2 class="p-contact__label--required">
             <label for="detail"><span>お問い合わせ内容</span><strong>*必須</strong></label>
           </h2>
-          <textarea name="detail" id="detail" cols="30" rows="9" required></textarea>
+          <textarea name="detail" id="detail" cols="30" rows="9" pattern=".{,10}" title="入力可能なテキストは最大 10 文字です。" class="p-contact__textFied" required></textarea>
+          <p id="detail-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
-          <h2 class="p-contact__label--require">
+          <h2 class="p-contact__label--required">
             <label for="adv"><span>PON DESIGNをどちらでお知りになりましたか？</span><strong>*必須</strong></label>
           </h2>
           <div class="p-contact__selectWrap">
@@ -182,6 +189,7 @@
               <option value="other">その他</option>
             </select>
           </div>
+          <p id="adv-error" class="p-contact__errorMessage"></p>
         </div>
         <div class="p-contact__entry">
           <h2 class="p-contact__policyTitle">PRIVACY POLICY</h2>
@@ -286,9 +294,10 @@
               <label for="agreement" class="p-contact__checklabel">
                 <span>個人情報の取り扱いについて同意のうえ送信します。</span>
               </label>
+              <p id="agreement-error" class="p-contact__errorMessage"></p>
             </div>
             <div class="c-btn--doubleArrow">
-              <button href="/PonD/contact" class="c-btn__link">
+              <button id="submit" class="c-btn__link">
                 <span class="c-btn__txt">送信する</span>
               </button>
             </div>
@@ -296,6 +305,26 @@
         </div>
       </div>
     </form>
+    <div id="success-submit-modal" class="c-modal js-modal js-focus-loop">
+      <div class="c-modal__inner">
+        <div class="c-modal__head">
+          <h2 class="c-modal__title"><em>送信が完了しました</em></h2>
+        </div>
+        <div class="c-modal__body">
+          <p>
+            お問合せいただきありがとうございます。<br>
+            ご入力いただきましたメールアドレス宛に追ってご連絡差し上げます。
+          </p>
+        </div>
+        <div class="c-modal__footer">
+          <div class="c-btn--close">
+            <button class="c-btn__link js-modal-closer">
+              <span class="c-btn__txt">閉じる</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   
 </main>
@@ -316,5 +345,5 @@
   </p>
 </footer>
 </div>
-<script defer="defer" src="../assets/javascript/bundle.a77ed34603df98f341da.js"></script></body>
+<script defer="defer" src="../assets/javascript/bundle.657668314ffda795b8de.js"></script></body>
 </html>
