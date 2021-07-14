@@ -1,3 +1,4 @@
+import { forceOpenModal } from "./Class/_Modal.mjs";
 import { htmlspecialchars } from "./_htmlspecialchars.mjs";
 
 export const submitContact = (_form) => {
@@ -67,8 +68,7 @@ export const submitContact = (_form) => {
   }
 
   const fetchValues = () => {
-    const url = 'https://hooks.slack.com/services/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';
-
+    const url = 'hogehoge'
     const payload = {
       text: `
       お問い合わせがありました。
@@ -88,6 +88,7 @@ export const submitContact = (_form) => {
     })
     .then(() => {
       document.getElementById('submit').disabled = true;
+      forceOpenModal('success-submit-modal');
     })
   }
 
@@ -96,4 +97,4 @@ export const submitContact = (_form) => {
     fetchValues();
   }
   init();
-}
+};

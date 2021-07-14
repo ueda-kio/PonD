@@ -33,33 +33,35 @@
     <p class="p-header__caption"><%= header.caption %></p>
   </div>
 </header>
-<button class="p-hamburgerMenu js-menuTrigger" aria-controls="global-menu-panel" aria-expanded="false">
-  <div class="c-hamburgerMenu">
-    <span class="c-hamburgerMenu__text">メニュー</span>
-  </div>
-  <span class="p-hamburgerMenu__txt">MENU</span>
-  <span class="p-hamburgerMenu__txt--open">OPEN</span>
-  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
-</button>
-<nav id="global-menu-panel" class="p-globalMenu" hidden>
-  <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>news/" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>service/" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>works/" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>company/" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>recruit/" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>contact/" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a>
-    </li>
-  </ul>
-</nav>
+<div class="js-focus-loop">
+  <button class="p-hamburgerMenu js-menuTrigger" aria-controls="global-menu-panel" aria-expanded="false">
+    <div class="c-hamburgerMenu">
+      <span class="c-hamburgerMenu__text">メニュー</span>
+    </div>
+    <span class="p-hamburgerMenu__txt">MENU</span>
+    <span class="p-hamburgerMenu__txt--open">OPEN</span>
+    <span class="p-hamburgerMenu__txt--close">CLOSE</span>
+  </button>
+  <nav id="global-menu-panel" class="p-globalMenu" hidden>
+    <ul class="p-globalMenu__list">
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>news/" <%= page === 'news' ? 'aria-current=page' : '' %>>NEWS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>service/" <%= page === 'service' ? 'aria-current=page' : '' %>>SERVICE</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>works/" <%= page === 'works' ? 'aria-current=page' : '' %>>WORKS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>company/" <%= page === 'company' ? 'aria-current=page' : '' %>>COMPANY</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>recruit/" <%= page === 'recruit' ? 'aria-current=page' : '' %>>RECRUIT</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>contact/" <%= page === 'contact' ? 'aria-current=page' : '' %>>CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+</div>

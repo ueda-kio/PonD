@@ -76,19 +76,17 @@
         opacity: 1;
       }
     }
-  }
-}
 
-html[data-scroll-disabled=true] .p-hamburgerMenu {
-  & .c-hamburgerMenu::before {
-    transform: translate(-49%, 350%) rotate(-24deg);
-  }
+    & .c-hamburgerMenu::before {
+      transform: translate(-49%, 350%) rotate(-24deg);
+    }
 
-  & .c-hamburgerMenu::after {
-    transform: translate(-50%, -250%) rotate(24deg);
-  }
+    & .c-hamburgerMenu::after {
+      transform: translate(-50%, -250%) rotate(24deg);
+    }
 
-  & .c-hamburgerMenu__text::before {
-    opacity: 0;
+    & .c-hamburgerMenu__text::before {
+      opacity: 0;
+    }
   }
 }

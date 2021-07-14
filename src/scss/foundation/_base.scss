@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+html {
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .6s;
+    pointer-events: none;
+  }
+
+  &.is-modal::before {
+    background-color: rgba(0, 0, 0, 0.75);
+    pointer-events: auto;
+  }
+}
+
 img {
   width: 100%;
   height: auto;
