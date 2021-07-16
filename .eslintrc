@@ -1,7 +1,17 @@
 {
-  "extends": ["eslint:recommended"],
-  "plugins": [],
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended" // TypeScriptでチェックされる項目をLintから除外する設定
+  ],
+  "plugins": ["@typescript-eslint"],
   "parserOptions": {
+    "parser": [
+      "babel-eslint",
+      "@typescript-eslint/parser"
+    ],
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".mjs"],
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
@@ -20,6 +30,10 @@
     "prefer-spread": 2,
     "prefer-arrow-callback": 2,
     "no-constant-condition": 2,
-    "no-dupe-args": 2
+    "no-dupe-args": 2,
+    "@typescript-eslint/explicit-module-boundary-types": "off", // .jsに対して.tsのlintを外す
+    "@typescript-eslint/no-inferrable-types": "off", // パラメーターの明示的な型宣言を許可
+    "@typescript-eslint/ban-types": "off", // 型Functionを使えるようにする
+    "@typescript-eslint/no-non-null-assertion": "off" // NonNullAssertionOperatorを許可
   }
 }
