@@ -52,36 +52,38 @@
     <span>SCROLL</span>
   </div>
 </header>
-<button class="p-hamburgerMenu js-menuTrigger" tabindex="1" aria-controls="global-menu-panel" aria-expanded="false">
-  <div class="c-hamburgerMenu">
-    <span class="c-hamburgerMenu__text">メニュー</span>
-  </div>
-  <span class="p-hamburgerMenu__txt">MENU</span>
-  <span class="p-hamburgerMenu__txt--open">OPEN</span>
-  <span class="p-hamburgerMenu__txt--close">CLOSE</span>
-</button>
-<nav id="global-menu-panel" class="p-globalMenu" hidden>
-  <ul class="p-globalMenu__list">
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>news" tabindex="1">NEWS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>service" tabindex="1">SERVICE</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>works" tabindex="1">WORKS</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>company" tabindex="1">COMPANY</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>recruit" tabindex="1">RECRUIT</a>
-    </li>
-    <li class="p-globalMenu__link">
-      <a href="<%= githubPath %>contact" tabindex="1">CONTACT</a>
-    </li>
-  </ul>
-</nav>
+<div class="js-focus-loop">
+  <button class="p-hamburgerMenu js-menuTrigger" tabindex="1" aria-controls="global-menu-panel" aria-expanded="false">
+    <div class="c-hamburgerMenu">
+      <span class="c-hamburgerMenu__text">メニュー</span>
+    </div>
+    <span class="p-hamburgerMenu__txt">MENU</span>
+    <span class="p-hamburgerMenu__txt--open">OPEN</span>
+    <span class="p-hamburgerMenu__txt--close">CLOSE</span>
+  </button>
+  <nav id="global-menu-panel" class="p-globalMenu" hidden>
+    <ul class="p-globalMenu__list">
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>news" tabindex="1">NEWS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>service" tabindex="1">SERVICE</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>works" tabindex="1">WORKS</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>company" tabindex="1">COMPANY</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>recruit" tabindex="1">RECRUIT</a>
+      </li>
+      <li class="p-globalMenu__link">
+        <a href="<%= githubPath %>contact" tabindex="1">CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <!-- .l-main -->
 <main>
   <div class="p-home">

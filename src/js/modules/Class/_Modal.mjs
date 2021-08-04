@@ -2,6 +2,7 @@ import { toggleScrollStop } from '../_scroll-stop.mjs'
 
 class Modal {
   constructor(elem) {
+    this._isOpen = false;
     this.html = document.documentElement;
     this.root = elem;
     this.openers = document.querySelectorAll(`[data-dialog-trigger="${this.root.id}"]`);
@@ -149,9 +150,6 @@ class Modal {
     this.html.classList.remove('is-modal');
     this.root.hidden = true;
     this.handler.focusManager.close();
-    // if(this.openers) {
-    //   this.openers[0].focus(true);
-    // }
   }
 
   // 強制的にモーダルを開く処理

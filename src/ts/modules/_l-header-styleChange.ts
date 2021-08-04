@@ -1,0 +1,38 @@
+export const headerStyleChanger = () => {
+
+  const toggleHeaderActive = () => {
+    const scrollHeight = window.pageYOffset;
+    const header = document.querySelectorAll<HTMLElement>('.p-header, .p-header--home')[0];
+    const headerTop = document.querySelector<HTMLElement>('.p-header__top');
+
+    if(header && headerTop) {
+      if(scrollHeight > header.clientHeight - 40 && !headerTop.classList.contains('is-active')) {
+        headerTop.classList.add('is-active');
+      } else if (scrollHeight <= header.clientHeight && headerTop.classList.contains('is-active')) {
+        headerTop.classList.remove('is-active');
+      }
+    }
+  };
+
+  const toggleHeaderPadding = () => {
+    const scrollHeight = window.pageYOffset;
+    const headerTop = document.querySelector<HTMLElement>('.p-header__top');
+    const menu = document.querySelector<HTMLElement>('.p-hamburgerMenu');
+
+    if(headerTop && menu) {
+      if(scrollHeight !== 0 && !headerTop.classList.contains('is-moved')) {
+        headerTop.classList.add('is-moved');
+        menu.classList.add('is-moved');
+      } else if (scrollHeight === 0 && headerTop.classList.contains('is-moved')) {
+        headerTop.classList.remove('is-moved');
+        menu.classList.remove('is-moved');
+      }
+    }
+  };
+
+  window.addEventListener('scroll', () => {
+    toggleHeaderActive();
+    toggleHeaderPadding();
+  });
+};
+
