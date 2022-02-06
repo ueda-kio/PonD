@@ -20,18 +20,26 @@ class Modal {
 
   setConfig() {
     const transitionTime = this.modal.getAttribute('data-modal-transition');
-    if (transitionTime !== null) {
-      this.transitionTime = Number(transitionTime);
+    const extractedNumber = transitionTime?.match(/[0-9]/g);
+
+    if (
+      typeof extractedNumber !== 'undefined' &&
+      extractedNumber !== null
+      ) {
+      this.transitionTime = Number(extractedNumber.join(''));
     }
 
-    this.modal.style.setProperty('--transition-time', `${this.transitionTime}s`);
+    this.modal.style.setProperty('--transition-time', `${this.transitionTime}ms`);
+    const isOpen = this.modal.getAttribute('aria-hidden') === 'false' ? true : false;
     this.triggerElms.forEach((trigger) => {
       trigger.setAttribute('aria-controls', `${this.modal.id}`);
+      isOpen ? trigger.setAttribute('aria-expanded', 'true') : trigger.setAttribute('aria-expanded', 'false');
     });
   }
 
   openModal(activeTrigger?: HTMLElement | HTMLElement) {
     this.activeTrigger = activeTrigger;
+    if (typeof this.activeTrigger !== 'undefined') this.activeTrigger.setAttribute('aria-expanded', 'true');
     this.modal.setAttribute('aria-hidden', 'false');
     this.modal.focus();
     document.body.classList.add('is-scrollLock');
@@ -45,6 +53,7 @@ class Modal {
 
     if (typeof this.activeTrigger !== 'undefined') {
       this.activeTrigger.focus();
+      this.activeTrigger.setAttribute('aria-expanded', 'false');
     }
 
     window.removeEventListener('keydown', this.closeTypeEsc);

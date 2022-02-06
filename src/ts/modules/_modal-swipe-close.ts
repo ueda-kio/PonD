@@ -73,12 +73,11 @@ export default (() => {
       modalHeader.addEventListener('touchend', (e: TouchEvent) => {
         const endPoint = e.changedTouches[0].clientY;
         const diff = endPoint - startPosition;
-        const limitDistance = 200;
-        const limitVelocity = 2.5;
 
         modalInner.style.removeProperty('transition');
         modalInner.style.removeProperty('transform');
 
+        const limitDistance = 200;
         if (diff > limitDistance) {
           modalManage.closeModal(`${modal.id}`);
         }
@@ -95,6 +94,7 @@ export default (() => {
 
           // 速度テスト
           console.log(dx / dt);
+          const limitVelocity = 2.5;
           if (dx / dt > limitVelocity) {
             modalManage.closeModal(`${modal.id}`);
           }

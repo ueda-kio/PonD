@@ -17,7 +17,7 @@ export const init = () => {
     }
   }
 
-  document.querySelectorAll('*[tabindex="-1"]').forEach((el) => {
-    el.setAttribute('aria-disabled', 'true');
-  });
+  // document.querySelectorAll('*[tabindex="-1"]').forEach((el) => {
+  //   el.setAttribute('aria-disabled', 'true');
+  // });
 }

@@ -21,10 +21,15 @@
   <section>
     <div class="c-btn">
       <button type="button" class="c-btn__link" data-modal-trigger="test-modal">
-        <span class="c-btn__txt">モーダルopen</span>
+        <span class="c-btn__txt">モーダルopen1</span>
       </button>
     </div>
 
+    <div class="c-btn">
+      <button type="button" class="c-btn__link" data-modal-trigger="test-modal">
+        <span class="c-btn__txt">snap modal</span>
+      </button>
+    </div>
 
     <div class="c-btn">
       <button type="button" class="c-btn__link" data-modal-trigger="bottom_up_modal">
@@ -32,31 +37,74 @@
       </button>
     </div>
 
-    <%- include ./_modal/_modal-header.ejs %>
-      <button type="button" class="m-modal__closeBtn" data-modal-close="test-modal">
-          <span class="m-modal__closeTxt">閉じる</span>
-        </button>
-        <div class="m-modal__head">
-          <h2 class="m-modal__title"><em>タイトル</em></h2>
+    <div id="snap-modal" aria-hidden="true" class="c-m_modal" tabindex="-1" data-modal-content data-focus-loop>
+      <div class="c-m_modal__overlay" data-modal-overlay></div>
+      <div role="dialog" aria-modal="true" class="c-m_modal__inner -fade">
+
+        <div class="snapModal">
+          <button type="button" class="c-m_modal__closeBtn" data-modal-close="snap-modal">
+            <span class="c-m_modal__closeTxt">閉じる</span>
+          </button>
+          <ul class="snapModal__list">
+            <%_ for (let i = 0; i < 4; i++) { _%>
+            <li class="snapModal__listItem">
+              <div class="modal__head">
+                <h2 class="modal__title"><em>タイトル</em></h2>
+              </div>
+              <div class="modal__body">
+                <p>
+                  テキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtext
+                </p>
+              </div>
+              <div class="modal__footer">
+                <div class="c-btn--close">
+                  <button class="c-btn__link js-modal-closer" data-modal-close="snap-modal">
+                    <span class="c-btn__txt">閉じる</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <%_ } _%>
+          </ul>
         </div>
-        <div class="m-modal__body">
+
+      </div>
+    </div>
+
+
+    <div id="test-modal" role="dialog" aria-hidden="true" aria-modal="true" class="c-m_modal" tabindex="-1" data-modal-content>
+      <div class="c-m_modal__overlay" data-modal-overlay></div>
+      <div aria-labelledby="テストモーダル" class="c-m_modal__inner -fade">
+        <div class="modal__wrapper">
+
+      <button type="button" class="c-m_modal__closeBtn" data-modal-close="test-modal" aria-label="モーダルを閉じる">
+          <!-- <span class="c-m_modal__closeTxt">閉じる</span> -->
+        </button>
+        <div class="modal__head">
+          <h2 class="modal__title"><em>タイトル</em></h2>
+        </div>
+        <div class="modal__body">
           <p>
             テキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtext
           </p>
         </div>
-        <div class="m-modal__footer">
+        <div class="modal__footer">
           <div class="c-btn--close">
             <button class="c-btn__link js-modal-closer" data-modal-close="test-modal">
               <span class="c-btn__txt">閉じる</span>
             </button>
           </div>
         </div>
-    <%- include ./_modal/_modal-footer.ejs %>
 
-    <div id="bottom_up_modal" role="dialog" aria-hidden="true" aria-modal="true" class="c-m_modal" data-modal-content data-modal-transition="500" data-focus-loop>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottom_up_modal" aria-hidden="true" class="c-m_modal" tabindex="-1" data-modal-content data-modal-transition="300" data-focus-loop>
       <div class="c-m_modal__overlay" data-modal-overlay></div>
-      <div class="c-m_modal__inner" data-modal-swipe>
+      <div role="dialog" aria-modal="true" class="c-m_modal__inner -swipe" data-modal-swipe>
 
+      <div class="p-swipeModal">
       <button type="button" class="c-m_modal__closeBtn" data-modal-close="bottom_up_modal">
           <span class="c-m_modal__closeTxt">閉じる</span>
         </button>
@@ -65,7 +113,7 @@
         </div>
         <div class="wrapper">
           <ul class="list">
-            <%_ for (let i = 0; i < 20; i++) { _%>
+            <%_ for (let i = 0; i < 2; i++) { _%>
             <li class="list__item">リストアイテム</li>
             <%_ } _%>
           </ul>
@@ -80,6 +128,9 @@
 
       </div>
     </div>
+    </div>
 
+    <button class="button">button</button>
+    <p class="paragraph tsetse"></p>
   </section>
 <% include ../template/_footer %>
