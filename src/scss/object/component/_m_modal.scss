@@ -1,0 +1,139 @@
+@use "../../foundation/var.scss";
+
+.c-m_modal {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  &[aria-hidden=true] {
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 500ms;
+    transition-property: visibility, opacity;
+  }
+
+  &[aria-hidden=false] {
+    visibility: visible;
+    opacity: 1;
+
+    & [data-modal-swipe] {
+      transform: translateY(0%);
+    }
+
+    & .c-m_modal__overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    height: 100%;
+    background: rgba($color: #000, $alpha: 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 500ms, opacity 500ms;
+  }
+
+  &__header {
+    padding: 30px 0;
+    border-bottom: 2px solid #ddd;
+  }
+
+  &__closeBtn {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: none;
+    transform: translate(0, -100%);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__closeTxt {
+    position: absolute;
+    top: 100%;
+  }
+
+  &__inner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-height: calc(100vh - 100px);
+    padding: 0 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: translateY(100%);
+    transition: transform 500ms;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+  }
+}
+
+.p-swipeModal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  max-height: calc(100vh - 100px);
+  padding: 0 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 500ms;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 0 100px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display:none;
+  }
+}
+
+.list {
+  &__item {
+    padding: 20px 10px;
+    border-bottom: 2px solid #ddd;
+  }
+}
+
+.is-scrollLock {
+  overflow: hidden;
+}

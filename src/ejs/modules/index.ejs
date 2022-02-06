@@ -1,0 +1,85 @@
+<% const title = "MODULES"; const description = "moduleが置いてあるページです"; %>
+<% const page = 'recruit'; %>
+<%
+  const header = {
+    title: 'MODULES',
+    caption: 'モジュール置き場'
+  };
+%>
+<% const path = '../assets/images/'; %>
+
+<% include ../template/_head %>
+<!-- .l-header -->
+<% include ../template/_header %>
+<main class="l-main">
+  <div class="l-main__heading">
+    <ol class="l-main__breadcrumb">
+      <li><a href="<%= githubPath %>">HOME</a></li>
+      <li><%= title %></li>
+    </ol>
+  </div>
+  <section>
+    <div class="c-btn">
+      <button type="button" class="c-btn__link" data-modal-trigger="test-modal">
+        <span class="c-btn__txt">モーダルopen</span>
+      </button>
+    </div>
+
+
+    <div class="c-btn">
+      <button type="button" class="c-btn__link" data-modal-trigger="bottom_up_modal">
+        <span class="c-btn__txt">下からのヤツ</span>
+      </button>
+    </div>
+
+    <%- include ./_modal/_modal-header.ejs %>
+      <button type="button" class="m-modal__closeBtn" data-modal-close="test-modal">
+          <span class="m-modal__closeTxt">閉じる</span>
+        </button>
+        <div class="m-modal__head">
+          <h2 class="m-modal__title"><em>タイトル</em></h2>
+        </div>
+        <div class="m-modal__body">
+          <p>
+            テキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtextテキストtext
+          </p>
+        </div>
+        <div class="m-modal__footer">
+          <div class="c-btn--close">
+            <button class="c-btn__link js-modal-closer" data-modal-close="test-modal">
+              <span class="c-btn__txt">閉じる</span>
+            </button>
+          </div>
+        </div>
+    <%- include ./_modal/_modal-footer.ejs %>
+
+    <div id="bottom_up_modal" role="dialog" aria-hidden="true" aria-modal="true" class="c-m_modal" data-modal-content data-modal-transition="500" data-focus-loop>
+      <div class="c-m_modal__overlay" data-modal-overlay></div>
+      <div class="c-m_modal__inner" data-modal-swipe>
+
+      <button type="button" class="c-m_modal__closeBtn" data-modal-close="bottom_up_modal">
+          <span class="c-m_modal__closeTxt">閉じる</span>
+        </button>
+        <div class="c-m_modal__header" data-modal-header>
+          <p>Modal Header</p>
+        </div>
+        <div class="wrapper">
+          <ul class="list">
+            <%_ for (let i = 0; i < 20; i++) { _%>
+            <li class="list__item">リストアイテム</li>
+            <%_ } _%>
+          </ul>
+        </div>
+        <div class="c-m_modal__footer">
+          <div class="c-btn--close">
+            <button class="c-btn__link" data-modal-close="bottom_up_modal">
+              <span class="c-btn__txt">閉じる</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+<% include ../template/_footer %>
