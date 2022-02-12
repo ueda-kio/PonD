@@ -11,6 +11,7 @@ import { btnPressToDisabled } from './modules/_btnPressToDisabled';
 import './modules/Classes/_Modal-module';
 import './modules/Classes/_Util-focusLoop';
 import './modules/_modal-swipe-close';
+import './modules/Classes/_Disclosure';
 
 init()
 
