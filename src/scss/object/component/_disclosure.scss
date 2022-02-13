@@ -14,7 +14,11 @@
 
 	&__content {
 		overflow: hidden;
-		transition: height 300ms;
+		transition: visibility 300ms, height 300ms;
+
+		&.is-hidden {
+			height: 0;
+		}
 
 		&.is-open {
 			border-top: 1px solid #acacac;
